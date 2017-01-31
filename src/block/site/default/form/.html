@@ -1,0 +1,29 @@
+<form action="#" class="form-site {{class}}"> 
+	<div class="row {{prefix-page}}row">
+		<div class="cols {{prefix-page}}col-4">
+			<div class="{{prefix-page}}input icon icon-user">
+				<input type="text" class="{{prefix-form}}form-control form-control validate[required]" id="f[name]" placeholder="Ваше имя">
+			</div>	
+		</div>
+		<div class="cols {{prefix-page}}col-4">
+			<div class="{{prefix-page}}input icon icon-tel">
+				<input type="tel" class="{{prefix-form}}form-control form-control validate[required,custom[phone]]" id="f[tel]" placeholder="Телефон">
+			</div>	
+		</div>
+		<div class="cols {{prefix-page}}col-4">
+			<div class="{{prefix-page}}input icon icon-tel">
+				<input type="email" class="{{prefix-form}}form-control form-control validate[required,custom[email]]" id="f[email]" placeholder="Ваш e-mail">
+			</div>	
+		</div>
+		<div class="cols {{prefix-page}}col-12">
+			<div class="{{prefix-page}}input icon icon-tel">
+				<textarea id="f[note]" class="{{prefix-form}}form-control form-control validate[required]" placeholder="{{placeholder_textaria}}"></textarea>
+			</div>	
+		</div>
+		<div class="cols {{prefix-page}}col-12">
+			<div class="{{prefix-page}}input {{prefix-page}}btn">
+				<button type="submit" class="btn-site btn-mustard btn-submit">{{btn_name}}</button>
+			</div>	
+		</div>
+	</div>
+</form> 

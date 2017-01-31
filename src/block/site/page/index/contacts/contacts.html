@@ -1,0 +1,47 @@
+<div class="{{prefix-c}}row row">
+	<div class="cols {{prefix-c}}cols-left"> 
+		<h3 class="{{prefix-c}}heading index-heading-sm">Заявка на просмотр квартиры</h3>
+		[[azbntple 
+			tpl="/src/block/site/default/form/.html" 
+			class="form-location" 
+			prefix-form="_frs__"
+			prefix-page="form-location__"
+			placeholder_textaria="Комментарий"
+			btn_name="Оставить заявку"
+		]]
+	</div>
+	<div class="cols {{prefix-c}}cols-right">
+		<h3 class="{{prefix-c}}heading index-heading-sm">Офис продаж</h3> 
+		<div class="row {{prefix-c}}office-row">			
+			<div class="cols {{prefix-c}}col-left">
+				<div class="{{prefix-c}}office-item icon">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="call" class="{{prefix-c}}icon-call" ]]
+					<div><a href="tel:{{contacts.phone_tel}}">{{contacts.phone}}</a></div>
+					<div><a href="tel:{{contacts.phone2_tel}}">{{contacts.phone2}}</a></div>
+				</div> 
+				<div class="{{prefix-c}}office-item icon">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="email" class="{{prefix-c}}icon-call" ]]
+					<div><a href="mailto:{{contacts.email}}">{{contacts.email}}</a></div>
+				</div>
+				<div class="{{prefix-c}}office-item _address">
+					{{contacts.address}}
+				</div>
+			</div>		
+			<div class="cols {{prefix-c}}col-right">
+				<div class="{{prefix-c}}office-item">
+					<div class="_heading">ПН-ПТ</div>
+					<div>08:30 - 19:00</div>
+				</div>
+				<div class="{{prefix-c}}office-item">
+					<div class="_heading">СБ</div>
+					<div>10:00 - 15:00</div>
+				</div>
+				<div class="{{prefix-c}}office-item">
+					<div class="_heading">ВС</div>
+					<div>Выходной</div>
+				</div>
+			</div>	
+		</div>		
+		
+	</div>  
+</div>

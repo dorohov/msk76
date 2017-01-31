@@ -1,0 +1,28 @@
+{
+	"contacts":{
+		"name":"Зенит",
+		"name_street":"ул. Московская, д.76",
+		"email":"sales@zenit-orel.ru",
+		"phone":"+7 (4862) <span>44-50-60</span>",
+		"phone_tel":"+74862445060",
+		"phone2":"+7 (4862) <span>54-28-48</span>",
+		"phone2_tel":"+74862542848",
+		"address":"<span>г. Орёл,</span> ул. Старо-Московская, 10"
+	},
+	"soc":{
+		"vk":"https://vk.com/zao_zenit",
+		"fb":"https://www.facebook.com/zaozenit/",
+		"ok":"https://ok.ru/group/53047194615940",
+		"inst":"https://www.instagram.com/zao_zenit/"
+	},
+	"url-path-css": "/wp-content/themes/azbnbasetheme/css",
+	"url-path-css":"/css",
+	"url-path-img": "/wp-content/themes/azbnbasetheme/img",
+	"url-path-img":"/img",
+	"url-path-js": "/wp-content/themes/azbnbasetheme/js",
+	"url-path-js":"/js",
+	"url-path-plugins": "/wp-content/themes/azbnbasetheme/plugins",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon": "/wp-content/themes/azbnbasetheme/favicon",
+	"url-path-favicon":"/favicon"
+}

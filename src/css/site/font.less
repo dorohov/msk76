@@ -1,0 +1,65 @@
+.include-custom-font(
+	@family: @din, 
+	@src-name: @din, 
+	@weight: normal, 
+	@style: normal
+	){
+	@font-face{			
+		font-family: "@{family}";			
+		src:	url('@{url-path-fonts}/@{src-name}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{src-name}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-icon(@family: @icon, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-font(
+	@family: @open,
+	@src-name: @open,
+	@weight: normal, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @open, 		
+	@src-name: @open-bold, 		
+	@weight: 700,  
+	@style: normal
+	);
+.include-custom-font(
+	@family: @open, 		
+	@src-name: @open-sbold, 		
+	@weight: 600, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @open,	
+	@src-name: @open-ebold, 	 		
+	@weight: 800, 
+	@style: normal);
+.include-custom-font(
+	@family: @neusa, 
+	@src-name: @neusa-bold, 		
+	@weight: 700, 
+	@style: normal);
+.include-custom-font(
+	@family: @neusa,
+	@src-name: @neusa-sbold, 		
+	@weight: 600, 
+	@style: normal);
+.include-custom-font(
+	@family: @neusa, 
+	@src-name: @neusa-black,		
+	@weight: 800, 
+	@style: normal);
+.include-custom-font(
+	@family: @proxima, 	
+	@src-name: @proxima,	
+	@weight: normal, 
+	@style: normal);

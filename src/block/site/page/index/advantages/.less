@@ -1,0 +1,365 @@
+//====== base-block ======//
+.index-advantages-block{
+	width: 100%;
+	&.skrollable-between{
+		._iab__line{
+			animation-name: lineInLeft;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+			//animation-fill-mode: forwards;
+		}
+	}
+}
+.advantages-block{
+    padding-left: 13.5%;
+    padding-top: 80px;	
+}
+.advantages-heading{
+	position: relative;
+	font-size: @b-fs + 20px;//36px;
+	line-height: @b-lh + 26px;// 50px;
+	margin-bottom: 40px;
+}
+.advantages-num{
+	position: absolute;
+	color: fadeout(#383838, 90%);
+    top: 10px;
+    left: 0px;
+    padding-left: 13%; 
+    padding-bottom: 30px;
+    font-family: @neusa;
+    font-weight:  800;
+	font-size: @b-fs + 209px;//225
+	line-height: @b-lh + 106px;//130
+}
+.advantages-num__line{
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+	height: 2px;
+	background-color: fadeout(@b-color, 50%);	
+}
+.advantages-note{
+	*{
+		margin-bottom: 25px;
+	}
+}
+._iab__heading{
+}
+._iab__line{
+	width: 53%;
+}
+
+@keyframes lineInLeft {
+	from {
+		right: -100%;
+	}
+	to{
+		right: 0%;
+	}
+}
+@keyframes lineInRight{
+	from {
+		left: -100%;
+	}
+	to{
+		left: 0%;
+	}
+}
+//====== step 1 - equipment ======//
+._iab__equipment{
+	left: 0;
+	width: 49%;
+	&.skrollable-between{
+		._iabe__num-line{
+			animation-name: lineInRight;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+		}
+	}
+}
+//._iabe__heading{}
+._iabe__num-line{
+	width: 35%;
+    left: 0;
+}
+//._iab__equipment-item{}
+._iabei__row{
+	flex-wrap: wrap;
+	margin-left: -25px;
+	margin-right: -25px;
+}
+._iabei__cols{
+	width: 25%;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+._iabei__item{
+	margin-bottom: 40px;
+}
+._iabei__item-preview{
+	margin-bottom: 40px;
+}
+._iabei__item-heading{
+	font-size: @b-fs + 4px; //20
+	margin-bottom: 15px;
+}
+._iabei__item-note{
+	font-size: @b-fs - 2px; //14
+	line-height: @b-lh - 4px; //20
+}
+
+//====== step 2 - access ======//
+._iab__access{
+	right: 0;
+	width: 44%;
+	padding-top: 110px;
+	padding-right: 10%;
+	padding-left: 6%;
+	&.skrollable-between{
+		._iaba__num-line{
+			animation-name: lineInLeft;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+		}
+	}
+}
+._iaba__heading{
+	font-size: @b-fs + 17px;//33px;
+	line-height: @b-lh + 20px;// 44px;
+}
+._iaba__num{
+	padding-left: 0;
+	width: 100%;
+}
+._iaba__num-line{
+	width: 69%;
+    right: 0;
+}
+//._iab__access-item{}
+//._iabai__row{}
+._iabai__cols{
+	margin-bottom: 35px;
+	&.one{
+		width: 54%;
+	}
+	&.left{
+		width: 27%;
+	}
+	&.center{
+		width: 27%;
+	}
+	&.right{
+		width: 46%;
+	}
+}
+
+//====== step 3 - safety ======//
+._iab__safety{
+	height: 100%;
+	max-height: 530px;
+	left: 0;
+    width: 33%;
+    padding-left: 12.5%;
+    padding-top: 90px;
+	&.skrollable-between{
+		._iabs__num-line{
+			animation-name: lineInRight;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+		}
+	}
+}
+._iabs__num{
+    padding-left: 17%;
+}
+._iabs__num-line{
+	left: 0;
+    width: 29%;
+}
+._iab__safety-item{
+	height: 100%;
+	max-height: 530px;
+
+}
+._iabsi__row{
+	justify-content: flex-end;
+}
+
+//====== step 4 - beautification ======//
+._iab__beautification{
+	right: 0;
+	width: 41%;
+	padding-top: 95px;
+	padding-right: 10%;
+	padding-left: 150px;
+	&.skrollable-between{
+		._iabb__num-line{
+			animation-name: lineInLeft;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+		}
+	}
+}
+._iabb__num{
+    padding-left: 5px;
+    width: 100%;
+}
+._iabb__num-line{ 
+	width: 63%;
+    right: 0;
+    top: 40%;
+}
+._iab__beautification-item{}
+._iabbi__cols{width: 60%;}
+
+//====== step 5 - parking ======//
+._iab__parking{
+	left: 0;
+    width: 33%;
+    padding-left: 12.5%;
+    padding-top: 85px;
+	&.skrollable-between{
+		._iabp__num-line{
+			animation-name: lineInRight;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+		}
+	}
+}
+._iabp__num{
+    padding-left: 17%;
+}
+._iabp__num-line{
+	left: 0;
+    width: 29%;
+}
+//._iab__parking-item{}
+._iabpi__row{
+	justify-content: flex-end;
+}
+//._iabpi__cols{}
+//====== step 6 - backlight ======//
+._iab__backlight{ 
+    left: 0;
+    width: 100%;
+    height: 960px;
+	&.skrollable-between{
+		._iabbl__num-line{
+			animation-name: lineInLeft;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+		}
+	}
+    &.on{
+    	._iabbl__num{color: fadeout(@white, 90%);}
+    	._iabbl__heading,
+		._iabbl__advantages-note{
+    		color: @white;
+    	}
+		._iabbl__num-line{background-color: @white;}
+    }
+    &.off{}
+}
+._iabbl__inner{
+	position: absolute;
+	z-index: 2;
+    right: 0;
+    width: 45%;
+    margin-top: 40px;
+    padding-top: 110px;
+    padding-left: 135px;
+    padding-right: 220px;
+}
+._iabbl__num{
+	padding-left: 0;
+	width: 100%;
+}
+._iabbl__num-line{
+	width: 71%;
+	right: 0;
+	top: 42%;
+}
+._iabbl__heading{
+	line-height: @b-lh + 20px;// 44px;
+}
+._iabbl__advantages-note{
+	margin-bottom: 35px;
+}
+._iabbl__switch{
+	width: 130px;
+	margin: 0;
+	position: relative;
+	z-index: 2;
+	list-style: none;
+	text-transform: lowercase;
+	border: 1px solid @white;
+	display: flex;
+	font-weight: 600;
+	border-radius: 20px;
+	> li{
+		width: 50%;
+		position: relative;
+		z-index: 2;
+		>a{
+			display: block;
+			font-size: @b-fs - 4px;
+			color: @white;
+			padding: 5px 15px;
+			text-align: center;
+		}
+		&.active{
+			>a{
+				color: @black;
+			}
+		}
+		&.switch-input{
+			position: absolute;
+			width: 50%;
+			height: 100%;
+			background: yellow;
+			border-radius: 20px;
+			z-index: 1;
+			transition: @transition-site;
+			left: 0;
+		}
+	}
+	&.on{
+		> li{
+			&.switch-input{
+				left: 0;
+			}
+		}
+	}
+	&.off{
+		> li{
+			&.switch-input{
+				left: 50%;
+			}
+		}
+	}
+}
+._iabbl__tab-content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+._iabbl__tab-pane{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	transition: @transition-site;
+	transition: .5s all;
+	opacity: 1;
+	visibility: hidden;
+	&.active{visibility: visible;}
+}
