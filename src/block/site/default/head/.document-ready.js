@@ -36,11 +36,12 @@ $('.text-block img').parent().addClass('_tb__img');
 		this.title = this.title;
 	}
 });*/
+/*
 $("form.form-site").validationEngine(
 	'attach', {
 		promptPosition : "bottomLeft"
 	}
-);
+);*/
 retinajs();
 /*
 $('._ipc__list').owlCarousel({

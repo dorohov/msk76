@@ -675,9 +675,39 @@
 			>
 				<div class="_icbc__row row">
 	<div class="cols _icbc__cols-left"> 
-		<h3 class="_icbc__heading index-heading-sm">Заявка на просмотр квартиры</h3>
-		
-		<a href="#callbackwidget" class="btn-site btn-mustard btn-submit">Оставить заявку</a>
+		<!-- <h3 class="_icbc__heading index-heading-sm">Заявка на просмотр квартиры</h3> -->
+		<h3 class="_icbc__heading index-heading-sm">Заявка на консутьтацию</h3>
+		<form action="#" method="post" class="form-site form-location callbackwidget-call-form
+"> 
+	<div class="row form-location__row">
+		<div class="cols form-location__col-4">
+			<div class="form-location__input icon icon-user">
+				<input type="text" class="_frs__form-control form-control validate[required] callbackwidget-name" id="f[name]" placeholder="Ваше имя">
+			</div>	
+		</div>
+		<div class="cols form-location__col-4">
+			<div class="form-location__input icon icon-tel">
+				<input type="tel" class="_frs__form-control form-control validate[required,custom[phone]]" id="f[tel]" placeholder="Телефон">
+			</div>	
+		</div>
+		<!--<div class="cols form-location__col-4">
+			<div class="form-location__input icon icon-tel">
+				<input type="email" class="_frs__form-control form-control validate[required,custom[email]]" id="f[email]" placeholder="Ваш e-mail">
+			</div>	
+		</div>-->
+		<div class="cols form-location__col-12">
+			<div class="form-location__input icon icon-tel">
+				<textarea id="f[note]" class="_frs__form-control form-control validate[required]" placeholder="Комментарий"></textarea>
+			</div>	
+		</div>
+		<div class="cols form-location__col-12">
+			<div class="form-location__input form-location__btn">
+				<button type="submit" class="btn-site btn-mustard btn-submit">Оставить заявку</button>
+			</div>	
+		</div>
+	</div>
+</form> 
+		<!-- <a href="#callbackwidget" class="btn-site btn-mustard btn-submit">Оставить заявку</a> -->
 	</div>
 	<div class="cols _icbc__cols-right">
 		<h3 class="_icbc__heading index-heading-sm">Офис продаж</h3> 
@@ -688,7 +718,7 @@
 	<use xlink:href="/img/svg/sprite.svg#call"></use>
 </svg>
 					<div><a href="tel:+74862445060">+7 (4862) <span>44-50-60</span></a></div>
-					<div><a href="tel:+74862542848">+7 (4862) <span>54-28-48</span></a></div>
+					<!-- <div><a href="tel:+74862542848">+7 (4862) <span>54-28-48</span></a></div> -->
 				</div> 
 				<div class="_icbc__office-item icon">
 					<svg class="icon-svg icon-email _icbc__icon-call" role="img">
@@ -875,8 +905,8 @@
 <script src="/js/svg4everybody.min.js" ></script>
 <script>svg4everybody();</script>
 
-<link rel="stylesheet" href="https://cdn.callbackkiller.com/widget/cbk.css">
-<script type="text/javascript" src="https://cdn.callbackkiller.com/widget/cbk.js?cbk_code=2a25e85db647b0cbc9637a496597ff9e" charset="UTF-8" async></script>
+<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=1df1b39b170d0cb5d3f7be9cf7be70da" charset="UTF-8" async></script>
 		<script src="/js/retina.min.js" ></script>
 		<script src="/js/skrollr.min.js" ></script>
 		<script>
