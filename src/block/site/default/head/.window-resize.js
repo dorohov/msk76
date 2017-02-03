@@ -15,25 +15,25 @@ var h_window = $(window).height(),
 	h_content = h_window - h_navbar - h_footer;
 
 if (device.tablet()) {
-	$("._msp__block .scroller").mCustomScrollbar();
-	$('.index-page-content').css("min-height", h_content_index);	
-	$('.content-block.second').css("min-height", h_content_scroller_sm);
-	$('._adpc__row').css("min-height", h_content_scroller_sm);
-	$('._gpc__preview-cols').css("max-width", w_window);
+	$//("._msp__block .scroller").mCustomScrollbar();
+	//$('.index-page-content').css("min-height", h_content_index);	
+	//$('.content-block.second').css("min-height", h_content_scroller_sm);
+	//$('._adpc__row').css("min-height", h_content_scroller_sm);
+	//$('._gpc__preview-cols').css("max-width", w_window);
 }
 if (device.mobile()) {	
-	$('.second-page').css("min-height", h_window);
+	//$('.second-page').css("min-height", h_window);
 } else{
-	$('._adpc__carousel').carousel({
+	/*$('._adpc__carousel').carousel({
 	    interval : false
-	});	
+	});	*/
 	$('.twoGIS-map__block').css("height", h_map);
 	//$('.about-team-page-content').css("height", h_team);
 }
 if (device.mobile() || device.tablet()) {
-	$('.navbar').addClass('navbar-fixed-top');
+	//$('.navbar').addClass('navbar-fixed-top');
 	//$('.navbar').css("max-width", w_window);
-	$('.owl-slider ul').owlCarousel({
+	/*$('.owl-slider ul').owlCarousel({
 		margin: 0,
 		loop: true,
 		items:1,	
@@ -43,14 +43,18 @@ if (device.mobile() || device.tablet()) {
 		autoplayTimeout:10000,
 		nav: true,
 		dots: false		
-	});	 
+	});	*/
+	$("._iabai__cols.one").prependTo($("._iabai__row._two"));
+	$("._ifbc__btn-block").appendTo($("._ifb__complex"));
+	$(".bg-element").remove();
+	//$("._ilb__items-block").appendTo($(".index-locaion-block"));
 } else {
-	$('.content-block.second').css("min-height", h_content_scroller);
+	//$('.content-block.second').css("min-height", h_content_scroller);
 	//$('.contacts-page-content').css("height", h_content_scroller);
 	//$('.content-block.second').css("top", h_header);
-	$(".scroller").mCustomScrollbar();	
-	$("._atpc__heading").prependTo($("._atpc__tab-pane-cols-right"));	
-	$(".error-page-content").css("height", h_content_scroller);	
+	//$(".scroller").mCustomScrollbar();	
+	//$("._atpc__heading").prependTo($("._atpc__tab-pane-cols-right"));		
+	//$(".error-page-content").css("height", h_content_scroller);	
 }
-$(".navbar-fixed-top").autoHidingNavbar();
-$('.news-item__preview a').css("height", w_news_preview);
+//$(".navbar-fixed-top").autoHidingNavbar();
+//$('.news-item__preview a').css("height", w_news_preview);

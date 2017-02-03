@@ -16,7 +16,8 @@
 <meta name="msapplication-config" content="/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-<link href="/css/site.css" rel="stylesheet"> 
+<link href="/css/site.css" rel="stylesheet">
+<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=zmiCynB6e65ajX1qWWP6ejDkuCtRk1AC/Mey9RmBJhcOvT4UV2fESqRDGma3Jc0MVPtNxFw7Aj3ARiAsx3B15i7Zn*mpvUAK2Misb/GsPdn0IchUXLXuto/R*L*7q38jLZjg18Wik6gYqjmCQW704OEHNrNQTjtv8WiB4CmoB3A-&pixel_id=1000073085';</script> 
 		<link href="/css/scrollr-position.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body class="index-page">
@@ -31,39 +32,39 @@
 				<div class="row navbar-header__row ">
 					<div class="cols navbar-brand__cols">
 						<a class="navbar-brand" href="http://zenit-orel.ru/">
-							<img src="/img/default/logotip.png" data-rjs="2" class="blue" alt="" > 
+							<img src="/img/default/logotip.png" data-rjs="2" alt="" > 
 						</a>
 					</div>
-					<div class="cols navbar-hamburger__cols">
-						<button class="hamburger hamburger--spring" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".content-wrap">
-							<span class="hamburger-box">
-								<span class="hamburger-inner"></span>
-							</span>
-						</button>					
-					</div>
+		
 				</div>
 			</div>
 		</div>
 		<div class="cols navbar-collapse-cols">
-			<div class="collapse navbar-collapse" id="bs-navbar-collapse">		
-				<div class="row navbar-collapse-row">
-					<div class="cols navbar-nav-cols">
-						<ul class="nav navbar-nav">			
-							<li><a href="/">Описание</a></li>
-							<li><a href="/layouts.html">Планировки квартир</a></li>
-							<li><a href="/building.html">Ход строительства</a></li>
-							<li><a href="/docs.html">Документы</a></li>
-							<li><a href="/contacts.html">Контакты</a></li>
-						</ul> 
-					</div>	
-					<div class="cols navbar-contacts-cols">
-						<a href="tel:+74862445060" class="navbar-contacts__item">
-							+7 (4862) <span>44-50-60</span>
-							<div class="__icon"></div>
-						</a>
-					</div>
-				</div>	
+			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
+				<div class="navbar-collapse-inner">	
+					<ul class="nav navbar-nav">			
+						<li><a href="/">Описание</a></li>
+						<li><a href="/layouts.html">Планировки квартир</a></li>
+						<li><a href="/building.html">Ход строительства</a></li>
+						<li><a href="/docs.html">Документы</a></li>
+						<li><a href="/contacts.html">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="navbar-hamburger">
+					<button class="hamburger hamburger--vortex" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".content-wrap">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
 			</div>
+			
+		</div>	
+		<div class="cols navbar-contacts-cols">
+			<a href="tel:+74862445060" class="navbar-contacts__item">
+				+7 (4862) <span>44-50-60</span>
+				<div class="__icon"></div>
+			</a>
 		</div>
 	</div>
 </div>
@@ -260,7 +261,7 @@
 				Запорная<br> и регулирующая арматура
 			</h4>
 			<div class="_iabei__item-note">
-				Дом оснащен запорно-регулирующей арматурой, которая обеспечивает повышенную надежность и&nbsp;энергоэффективность инженерных систем.
+				Дом оснащен запорно-регулирующей арматурой, которая обеспечивает высокую энергоэффективность и надежность инженерных систем.
 			</div>
 		</div>
 	</div>
@@ -309,9 +310,6 @@
 		<div class="_iabei__item">
 			<div class="_iabei__item-preview">
 				<img src="/img/icon/icon-eqt8.png" alt="">
-				<svg class="icon-svg icon-eqt8 {{class}}" role="img">
-	<use xlink:href="/img/svg/sprite.svg#eqt8"></use>
-</svg>
 			</div>
 			<h4 class="_iabei__item-heading">
 				Электротехнические<br> изделия «Schneider Electric»
@@ -352,12 +350,12 @@
 				data-2350="top[linear]:20%;"
 				data-3150="top[linear]:-130%;"
 			>
-				<div class="row _iabai__row">
+				<div class="row _iabai__row _one">
 	<div class="cols _iabai__cols one">
 		<img src="/img/index/access-item1.jpg" alt="">
 	</div>
 </div>
-<div class="row _iabai__row">
+<div class="row _iabai__row _two">
 	<div class="cols _iabai__cols left">
 		<img src="/img/index/access-item2.jpg" alt="">
 	</div>
@@ -393,7 +391,13 @@
 			>
 				<div class="row _iabsi__row">
 	<div class="cols _iabsi__cols">
-		<img src="/img/index/safety-item1.jpg" alt="">
+		<!-- <img src="/img/index/safety-item1.jpg" alt=""> -->
+		<picture class="_iabsi__img">        
+			<!-- <source srcset="/img/default/logotip.png" media="(max-width: 767px)">     -->
+			<source srcset="/img/index/safety-item1.jpg" media="(max-width: 767px)">    
+			<source srcset="/img/index/safety-item1.jpg">    
+			<img srcset="/img/index/safety-item1.jpg" alt="">
+		</picture>
 	</div>
 </div> 				
 			</div>
@@ -409,7 +413,10 @@
 <h3 class="advantages-heading _iabb__heading">
 	Благоустройство
 </h3>
-<div>Придомовая территория оснащена детской и спортивной площадками (для занятий физкультурой). Площадки имеют гигиеническое покрытие из резиновой крошки, сокращающее возможность возникновения травм. Дополнительно придомовая территория оборудована удобными скамейками для спокойного отдыха жильцов дома.</div>  				
+<div class="advantages-note">
+	<p>Придомовая территория оснащена детской и спортивной площадками (для занятий физкультурой). Площадки имеют гигиеническое покрытие из резиновой крошки, сокращающее возможность возникновения травм.</p>
+	<p>Дополнительно придомовая территория оборудована удобными скамейками для спокойного отдыха жильцов дома.</p>
+</div>  				
 			</div>
 			<div class="_iab__beautification-item index-full-block"
 				data-3300="top[linear]:100%;"
@@ -418,7 +425,13 @@
 			>
 				<div class="row _iabbi__row">
 	<div class="cols _iabbi__cols ">
-		<img src="/img/index/beautification-item1.jpg" alt="">
+
+		<picture class="_iabbi__img">        
+			<source srcset="/img/index/beautification-item1.jpg" media="(max-width: 767px)">    
+			<source srcset="/img/index/beautification-item1.jpg">    
+			<img src="/img/index/beautification-item1.jpg" alt="">
+		</picture>
+		
 	</div>
 </div> 				
 			</div>
@@ -551,7 +564,9 @@
 				<div class="_ilb__items-cols cols">
 					<div class="_ilb__item">
 						<div class="_ilb__item-preview">
-							<img src="/img/icon/icon-loc1.png" alt="">
+							<svg class="icon-svg icon-bus _ilb__icon" role="img">
+	<use xlink:href="/img/svg/sprite.svg#bus"></use>
+</svg>
 						</div>
 						<div class="_ilb__item-name">
 							Остановки общественного транспорта
@@ -561,7 +576,9 @@
 				<div class="_ilb__items-cols cols">
 					<div class="_ilb__item">
 						<div class="_ilb__item-preview">
-							<img src="/img/icon/icon-loc2.png" alt="">
+							<svg class="icon-svg icon-kindergarten _ilb__icon" role="img">
+	<use xlink:href="/img/svg/sprite.svg#kindergarten"></use>
+</svg>
 						</div>
 						<div class="_ilb__item-name">
 							Центры развития детей
@@ -571,7 +588,9 @@
 				<div class="_ilb__items-cols cols">
 					<div class="_ilb__item">
 						<div class="_ilb__item-preview">
-							<img src="/img/icon/icon-loc3.png" alt="">
+							<svg class="icon-svg icon-school _ilb__icon" role="img">
+	<use xlink:href="/img/svg/sprite.svg#school"></use>
+</svg>
 						</div>
 						<div class="_ilb__item-name">
 							Учебные заведения
@@ -581,7 +600,9 @@
 				<div class="_ilb__items-cols cols">
 					<div class="_ilb__item">
 						<div class="_ilb__item-preview">
-							<img src="/img/icon/icon-loc4.png" alt="">
+							<svg class="icon-svg icon-sport _ilb__icon" role="img">
+	<use xlink:href="/img/svg/sprite.svg#sport"></use>
+</svg>
 						</div>
 						<div class="_ilb__item-name">
 							Спортивные объекты
@@ -591,7 +612,9 @@
 				<div class="_ilb__items-cols cols">
 					<div class="_ilb__item">
 						<div class="_ilb__item-preview">
-							<img src="/img/icon/icon-loc5.png" alt="">
+							<svg class="icon-svg icon-shop _ilb__icon" role="img">
+	<use xlink:href="/img/svg/sprite.svg#shop"></use>
+</svg>
 						</div>
 						<div class="_ilb__item-name">
 							Торговые<br> центры						
@@ -601,7 +624,9 @@
 				<div class="_ilb__items-cols cols">
 					<div class="_ilb__item">
 						<div class="_ilb__item-preview">
-							<img src="/img/icon/icon-loc6.png" alt="">
+							<svg class="icon-svg icon-bank _ilb__icon" role="img">
+	<use xlink:href="/img/svg/sprite.svg#bank"></use>
+</svg>
 						</div>
 						<div class="_ilb__item-name">
 							Банки
@@ -611,7 +636,9 @@
 				<div class="_ilb__items-cols cols">
 					<div class="_ilb__item">
 						<div class="_ilb__item-preview">
-							<img src="/img/icon/icon-loc7.png" alt="">
+							<svg class="icon-svg icon-cofe _ilb__icon" role="img">
+	<use xlink:href="/img/svg/sprite.svg#cofe"></use>
+</svg>
 						</div>
 						<div class="_ilb__item-name">
 							Кафе
@@ -850,12 +877,13 @@
 <!-- <link rel="stylesheet" type="text/css" href="/plugins/fancybox/source/helpers/jquery.fancybox-buttons.css" /> -->
 
 <script src="/js/jquery.min.js" ></script>
+<script src="/js/document-ready.js" ></script>
 
 <script src="/js/bootstrap.min.js" ></script>
 <script src="/js/jquery.bootstrap-autohidingnavbar.min.js" ></script>
 <script src="/js/device.min.js" ></script>
 <script src="/plugins/owl.carousel/owl.carousel.min.js"></script> 
-<script src="/js/document-ready.js" ></script>
+<!-- <script src="/js/jquery.touchSwipe.min.js" ></script> -->
 		
 <!-- <script src="/plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.min.js"></script> -->
 <!-- <script src="/plugins/fancybox/source/jquery.fancybox.min.js"></script> -->

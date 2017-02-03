@@ -11,13 +11,16 @@
 	font-size: @b-footer-fs; //16
 	line-height: @b-footer-lh; //24
 	font-family: @b-footer-ff;
-	background-color: @b-footer-bg;	
+	background-color: @b-footer-bg;
+	@media @media-device{text-align: center;}	
 	//background-color: red;	
 	//opacity: @opacity;
 	a{
 		&, &:hover, &:focus{color: @b-footer-color;} 
 	}
-	@media @media-screen{
+	@media @media-size-mdl{
+		font-size: @b-footer-fs - 2px; //14
+		line-height: @b-footer-lh - 2px; //22
 	}
 	.container{
 		padding-top: 25px;
@@ -56,23 +59,26 @@
 ._fs__copyright-cols{
 	width: 17%;
 	@media @media-device{width: 100%; text-align: center; margin-bottom: 20px;}
-	@media @media-size-xs{text-align: left}
-	//@media @media-size-mdl{width: 20%;}
-	//@media @media-size-xl{width: 25%;}
+	//@media @media-size-xs{text-align: left}
+	@media @media-size-mdl{width: 12%;}
+	@media @media-size-xl{width: 12%;}
 }
 ._fs__contacts-cols{
 	width: 40%;
 	@media @media-device{width: 100%; margin-bottom: 20px;}
-	//@media @media-size-mdl{width: 65%;}
+	@media @media-size-mdl{width: 52%;}
+	@media @media-size-xl{width: 48%;}
 }
 ._fs__soc-cols{
 	width: 28%;
 	@media @media-device{width: 100%; margin-bottom: 20px;}
+	@media @media-size-mdl{width: 24%;}
+	@media @media-size-xl{width: 20%;}
 }
 ._fs__dorohovdesign-cols{
 	width: 15%;
 	@media @media-device{width: 100%;}
-	@media @media-size-lg{width: 15%;}
+	@media @media-size-mdl{width: 12%;}
 	@media @media-size-xl{width: 20%;}
 }
 ._fs__phone-cols{
@@ -88,7 +94,7 @@
 	align-items: center;
 	//color: #c3c3c3;
 	font-size: @b-footer-fs - 3px; //13
-	text-transform: lowercase;
+	//text-transform: lowercase;
 	@media @media-device{justify-content: center;}
 	@media @media-screen{justify-content: flex-end;}
 	@media @media-size-mdl{flex-wrap: wrap; text-align: center;}

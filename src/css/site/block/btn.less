@@ -26,19 +26,35 @@
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: @b-fs - 2px;
-	padding: 20px;
+	font-size: @b-fs - 2px; //14px
     border-radius: 30px;
     letter-spacing: 2.5px;
+	@media @media-device{padding: 15px 20px}	
+	@media @media-screen{
+		padding: 20px;		
+		font-size: 1.45vh;//14px
+	}
+	@media @media-size-mdl{
+		font-size: 1.6vh;
+		padding: 15px;
+	}
 }
 .btn-submit{
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: @b-fs - 2px;
-	padding: 20px 50px;
+	font-size: @b-fs - 2px;	
     border-radius: 30px;
     letter-spacing: 2.5px;
+	@media @media-device{padding: 15px 30px}		
+	@media @media-screen{		
+		font-size: 1.45vh;//14px
+		padding: 20px 50px;
+	}
+    @media @media-size-mdl{
+		font-size: 1.6vh;
+    	padding: 15px 40px;
+    }
 }
 /*
 .soc-site{

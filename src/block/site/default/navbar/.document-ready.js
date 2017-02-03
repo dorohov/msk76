@@ -24,3 +24,17 @@
 
 		});
     });*/
+
+	/*$(".navbar-hamburger").swipe({
+	    swipeStatus:function(event, phase, direction, distance, duration, fingers)
+	        {$(this).text("You swiped " + direction ); 
+	            if (phase=="move" && direction =="right") {
+	                $(".navbar-site ").addClass("open-sidebar");
+	                return false;
+	            }
+	            if (phase=="move" && direction =="left") {
+	                 $(".navbar-site ").removeClass("open-sidebar");
+	                 return false; 
+	            }
+	        }
+	});*/

@@ -1,5 +1,11 @@
 <div class="row {{prefix-bi}}row">
 	<div class="cols {{prefix-bi}}cols ">
-		<img src="/img/index/beautification-item1.jpg" alt="">
+
+		<picture class="{{prefix-bi}}img">        
+			<source srcset="{{url-path-img}}/index/beautification-item1.jpg" media="{{media.size.xs}}">    
+			<source srcset="{{url-path-img}}/index/beautification-item1.jpg">    
+			<img src="{{url-path-img}}/index/beautification-item1.jpg" alt="">
+		</picture>
+		
 	</div>
 </div>
