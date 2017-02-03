@@ -133,7 +133,7 @@
 }
 .navbar-header-cols{	
 	@media @media-device{width: 50%; order: -2;}
-	@media @media-size-xs{width: 35%;}
+	@media @media-size-xs{width: 30%;}
 	@media @media-screen{width: 13%;}
 }
 .navbar-collapse-cols{
@@ -143,7 +143,7 @@
 }
 .navbar-contacts-cols{
 	@media @media-device{order: -1; text-align: right; width: 50%;}
-	@media @media-size-xs{width: 65%;}
+	@media @media-size-xs{width: 70%;}
 	@media @media-screen{
 		width: 30%;
 		text-align: right;
@@ -311,6 +311,7 @@
 .navbar-contacts__item{
 	display: inline-block;
     position: relative;
+	@media @media-size-xs{padding-right: 40px;}
 	@media @media-size-sm{padding-right: 65px;}
 	@media @media-screen{padding-right: 95px;}
     @media @media-size-mdl{padding-right: 65px;}
@@ -325,7 +326,10 @@
     	background-size: contain;
 		background-image: url("@{url-path-img}/icon/icon-tel.png");
 		right: 0;
-		@media @media-size-xs{display: none}
+		@media @media-size-xs{
+    		width: 32px;
+    		height: 32px;
+		}
 		@media @media-size-mdl{
 			width: 40px;
 			height: 40px;
@@ -334,14 +338,14 @@
     span{
     	font-weight: 700;
     }
-	&[href^="mailto:"],
-	&[href^="tel:"]{
+	a[href^="mailto:"],
+	a[href^="tel:"]{
 		font-family: @b-nav-ff;
 		@media @media-device{			
 			//&, &:hover, &:focus{color: @b-nav-color-device;}
 		}
 		@media @media-size-xs{
-			font-size: @b-fs + 2px; // 18;
+			font-size: @b-fs + 0px; // 18;
 		}
 		@media @media-size-sm{
 			font-size: @b-fs + 4px; // 20;
@@ -356,9 +360,6 @@
 		@media @media-size-lg{
 			font-size: @b-fs + 2px; // 20;
 		}
-	}
-	&[href^="tel:"]{
-
 	}
 }
 

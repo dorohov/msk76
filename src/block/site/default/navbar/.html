@@ -16,11 +16,16 @@
 			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 				<div class="navbar-collapse-inner">	
 					<ul class="nav navbar-nav">			
-						<li><a href="/">Описание</a></li>
+						<!--<li><a href="/">Описание</a></li>
 						<li><a href="/layouts.html">Планировки квартир</a></li>
 						<li><a href="/building.html">Ход строительства</a></li>
 						<li><a href="/docs.html">Документы</a></li>
-						<li><a href="/contacts.html">Контакты</a></li>
+						<li><a href="/contacts.html">Контакты</a></li>-->
+						<li><a href="#">Описание</a></li>
+						<li><a href="#">Планировки квартир</a></li>
+						<li><a href="#">Ход строительства</a></li>
+						<li><a href="#">Документы</a></li>
+						<li><a href="#">Контакты</a></li>
 					</ul>
 				</div>
 				<div class="navbar-hamburger">
@@ -34,10 +39,12 @@
 			
 		</div>	
 		<div class="cols navbar-contacts-cols">
-			<a href="tel:{{contacts.phone_tel}}" class="navbar-contacts__item">
-				{{contacts.phone}}
-				<div class="__icon"></div>
-			</a>
+			<div  class="navbar-contacts__item">
+				<a href="tel:{{contacts.phone_tel}}">
+					{{contacts.phone}}
+				</a>
+				<a class="__icon" href="#callbackwidget"></a> 
+			</div>
 		</div>
 	</div>
 </div>

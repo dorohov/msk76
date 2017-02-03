@@ -43,11 +43,16 @@
 			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 				<div class="navbar-collapse-inner">	
 					<ul class="nav navbar-nav">			
-						<li><a href="/">Описание</a></li>
+						<!--<li><a href="/">Описание</a></li>
 						<li><a href="/layouts.html">Планировки квартир</a></li>
 						<li><a href="/building.html">Ход строительства</a></li>
 						<li><a href="/docs.html">Документы</a></li>
-						<li><a href="/contacts.html">Контакты</a></li>
+						<li><a href="/contacts.html">Контакты</a></li>-->
+						<li><a href="#">Описание</a></li>
+						<li><a href="#">Планировки квартир</a></li>
+						<li><a href="#">Ход строительства</a></li>
+						<li><a href="#">Документы</a></li>
+						<li><a href="#">Контакты</a></li>
 					</ul>
 				</div>
 				<div class="navbar-hamburger">
@@ -61,10 +66,12 @@
 			
 		</div>	
 		<div class="cols navbar-contacts-cols">
-			<a href="tel:+74862445060" class="navbar-contacts__item">
-				+7 (4862) <span>44-50-60</span>
-				<div class="__icon"></div>
-			</a>
+			<div  class="navbar-contacts__item">
+				<a href="tel:+74862445060">
+					+7 (4862) <span>44-50-60</span>
+				</a>
+				<a class="__icon" href="#callbackwidget"></a> 
+			</div>
 		</div>
 	</div>
 </div>
@@ -178,9 +185,9 @@
 	<div class="cols _ihfb__cols-num">
 		<div class="_ihfb__num">46,9 м<sup>2</sup>&nbsp;— 104,12 м<sup>2</sup></div>
 	</div>
-	<div class="cols _ihfb__cols-btn">
+	<!--<div class="cols _ihfb__cols-btn">
 		<a href="#" class="btn-site btn-mustard btn-flat _ihfb__btn">Выбрать квартиру</a>
-	</div>
+	</div>-->
 </div>   
 			</div>
 			<div class="index-advantages-block"
@@ -392,8 +399,7 @@
 				<div class="row _iabsi__row">
 	<div class="cols _iabsi__cols">
 		<!-- <img src="/img/index/safety-item1.jpg" alt=""> -->
-		<picture class="_iabsi__img">        
-			<!-- <source srcset="/img/default/logotip.png" media="(max-width: 767px)">     -->
+		<picture class="_iabsi__img">     
 			<source srcset="/img/index/safety-item1.jpg" media="(max-width: 767px)">    
 			<source srcset="/img/index/safety-item1.jpg">    
 			<img srcset="/img/index/safety-item1.jpg" alt="">
@@ -508,9 +514,7 @@
 			>
 				<div class="_ifbc__row row">
 	<div class="cols _ifbc__cols-left"> 
-		<a href="#">
-			<img src="/img/index/flat-item1.jpg" alt="">
-		</a>
+		<img src="/img/index/flat-item1.jpg" alt="">
 	</div>
 	<div class="cols _ifbc__cols-right">
 		<div class="_ifbc__note">
@@ -531,12 +535,12 @@
 				<div class="_ifbc__note-item-heading">Окончание строительства:</div>
 				<div>3 квартал 2018 г.</div>
 			</div>
-			<div class="_ifbc__link">
+			<!-- <div class="_ifbc__link">
 				<a href="#">Ход строительства</a>
-			</div>
-			<div class="_ifbc__btn-block">
+			</div> -->
+			<!-- <div class="_ifbc__btn-block">
 				<a href="#" class="btn-site btn-mustard btn-flat _ifbc__btn">Выбрать квартиру</a> 
-			</div>
+			</div> -->
 		</div>  
 	</div>  
 </div> 	 			
@@ -672,35 +676,8 @@
 				<div class="_icbc__row row">
 	<div class="cols _icbc__cols-left"> 
 		<h3 class="_icbc__heading index-heading-sm">Заявка на просмотр квартиры</h3>
-		<form action="#" class="form-site form-location"> 
-	<div class="row form-location__row">
-		<div class="cols form-location__col-4">
-			<div class="form-location__input icon icon-user">
-				<input type="text" class="_frs__form-control form-control validate[required]" id="f[name]" placeholder="Ваше имя">
-			</div>	
-		</div>
-		<div class="cols form-location__col-4">
-			<div class="form-location__input icon icon-tel">
-				<input type="tel" class="_frs__form-control form-control validate[required,custom[phone]]" id="f[tel]" placeholder="Телефон">
-			</div>	
-		</div>
-		<div class="cols form-location__col-4">
-			<div class="form-location__input icon icon-tel">
-				<input type="email" class="_frs__form-control form-control validate[required,custom[email]]" id="f[email]" placeholder="Ваш e-mail">
-			</div>	
-		</div>
-		<div class="cols form-location__col-12">
-			<div class="form-location__input icon icon-tel">
-				<textarea id="f[note]" class="_frs__form-control form-control validate[required]" placeholder="Комментарий"></textarea>
-			</div>	
-		</div>
-		<div class="cols form-location__col-12">
-			<div class="form-location__input form-location__btn">
-				<button type="submit" class="btn-site btn-mustard btn-submit">Оставить заявку</button>
-			</div>	
-		</div>
-	</div>
-</form> 
+		
+		<a href="#callbackwidget" class="btn-site btn-mustard btn-submit">Оставить заявку</a>
 	</div>
 	<div class="cols _icbc__cols-right">
 		<h3 class="_icbc__heading index-heading-sm">Офис продаж</h3> 
@@ -880,9 +857,9 @@
 <script src="/js/document-ready.js" ></script>
 
 <script src="/js/bootstrap.min.js" ></script>
-<script src="/js/jquery.bootstrap-autohidingnavbar.min.js" ></script>
+<!-- <script src="/js/jquery.bootstrap-autohidingnavbar.min.js" ></script> -->
 <script src="/js/device.min.js" ></script>
-<script src="/plugins/owl.carousel/owl.carousel.min.js"></script> 
+<!-- <script src="/plugins/owl.carousel/owl.carousel.min.js"></script>  -->
 <!-- <script src="/js/jquery.touchSwipe.min.js" ></script> -->
 		
 <!-- <script src="/plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.min.js"></script> -->
@@ -897,6 +874,9 @@
 
 <script src="/js/svg4everybody.min.js" ></script>
 <script>svg4everybody();</script>
+
+<link rel="stylesheet" href="https://cdn.callbackkiller.com/widget/cbk.css">
+<script type="text/javascript" src="https://cdn.callbackkiller.com/widget/cbk.js?cbk_code=2a25e85db647b0cbc9637a496597ff9e" charset="UTF-8" async></script>
 		<script src="/js/retina.min.js" ></script>
 		<script src="/js/skrollr.min.js" ></script>
 		<script>
