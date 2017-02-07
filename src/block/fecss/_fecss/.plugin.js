@@ -30,6 +30,16 @@ function fecss_ScreenJS() {
 			'portrait' : [],
 			'landscape' : [],
 		},
+		'xl' : {
+			'default' : [],
+			'portrait' : [],
+			'landscape' : [],
+		},
+		'xxl' : {
+			'default' : [],
+			'portrait' : [],
+			'landscape' : [],
+		},
 	};
 	
 	ctrl.isXS = function() {
@@ -37,15 +47,21 @@ function fecss_ScreenJS() {
 	};
 	
 	ctrl.isSM = function() {
-		return (ctrl.screen.w < 992 && ctrl.screen.w > 767);
+		return (ctrl.screen.w > 767 && ctrl.screen.w < 1025);
 	};
 	
 	ctrl.isMD = function() {
-		return (ctrl.screen.w < 1200 && ctrl.screen.w > 991);
+		return (ctrl.screen.w > 1024 && ctrl.screen.w < 1200);
 	};
 	
 	ctrl.isLG = function() {
-		return (ctrl.screen.w > 1199);
+		return (ctrl.screen.w > 1199  && ctrl.screen.w < 1400);
+	};
+	ctrl.isXL = function() {
+		return (ctrl.screen.w > 1399  && ctrl.screen.w < 1681);
+	};
+	ctrl.isXXL = function() {
+		return (ctrl.screen.w > 1680);
 	};
 	
 	ctrl.screenIs = function() {
@@ -61,6 +77,12 @@ function fecss_ScreenJS() {
 		} else
 		if(ctrl.isLG()) {
 			result = 'lg';
+		}else
+		if(ctrl.isXL()) {
+			result = 'xl';
+		}else
+		if(ctrl.isXXL()) {
+			result = 'xxl';
 		}
 		return result;
 	};

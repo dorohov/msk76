@@ -14,6 +14,10 @@ var h_window = $(window).height(),
 	h_team = h_window - h_footer, 
 	h_content = h_window - h_navbar - h_footer;
 
+if (!device.mobile() || !device.tablet()) {
+	$('.content-block.second').css("min-height", h_content);
+}
+
 if (device.tablet()) {
 	$//("._msp__block .scroller").mCustomScrollbar();
 	//$('.index-page-content').css("min-height", h_content_index);	
@@ -31,6 +35,10 @@ if (device.mobile()) {
 	//$('.about-team-page-content').css("height", h_team);
 }
 if (device.mobile() || device.tablet()) {
+	$("._iabai__cols.one").prependTo($("._iabai__row._two"));
+	$("._ifbc__btn-block").appendTo($("._ifb__complex"));
+	$(".bg-element").remove();
+
 	//$('.navbar').addClass('navbar-fixed-top');
 	//$('.navbar').css("max-width", w_window);
 	/*$('.owl-slider ul').owlCarousel({
@@ -44,9 +52,6 @@ if (device.mobile() || device.tablet()) {
 		nav: true,
 		dots: false		
 	});	*/
-	$("._iabai__cols.one").prependTo($("._iabai__row._two"));
-	$("._ifbc__btn-block").appendTo($("._ifb__complex"));
-	$(".bg-element").remove();
 	//$("._ilb__items-block").appendTo($(".index-locaion-block"));
 } else {
 	//$('.content-block.second').css("min-height", h_content_scroller);

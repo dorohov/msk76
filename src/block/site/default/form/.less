@@ -13,6 +13,7 @@
 	font-family: @b-form-label-ff;
 	font-size: @b-form-label-fs;
 	line-height: @b-form-label-lh;
+
 	/*&.icon{
 		position: relative;
 		&:before{
@@ -52,6 +53,12 @@
 	line-height: @b-form-i-lh;
 	color: @b-form-i-color;
 	transition: @transition-site;
+	width: 100%; 
+	// Unstyle the caret on `<select>`s in IE10+.
+	&::-ms-expand {
+	border: 0;
+	background-color: transparent;
+	}
 	@media @media-device{height: 46px;}
 	&::-moz-placeholder{
 		transition: @transition-site;

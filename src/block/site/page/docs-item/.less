@@ -1,0 +1,136 @@
+.docs-page-content{
+	//position: relative;
+	overflow: hidden;
+}
+._dpc__heading-block{
+	position: relative;
+	z-index: 2;
+}
+._dpc__bg-elemen{
+	position: absolute;
+	border-radius: 50%;
+	z-index: 1;
+	background: #f0f0f0;
+	&.round1{
+    	@media @media-notsmart {
+			width: 24.9vh;
+			height: 24.9vh;
+			top: 22%;
+	    	//left: -150px;
+	    	left: -15vh;
+    	}
+    }
+	&.round2{
+    	@media @media-notsmart {
+    		width: 72.5vh;
+    		height: 72.5vh;
+		    bottom: -32vh;
+	        right: -16vh;
+    	}
+	}
+}
+._dpc__heading-line{
+	@media @media-screen {width: 55%;}
+}
+._dpc__inner{
+	position: relative;
+	z-index: 2;
+	@media @media-device{padding-top: 30px;}
+	@media @media-screen{padding-top: 7.6vh;}
+}
+._dpc__item{	
+	position: relative;	
+	@media @media-device{margin-bottom: 35px;}
+	@media @media-screen{
+		padding: 0 12.5%;
+		margin-bottom: 5.7vh;
+    	&::before{
+    		content: '';
+			position: absolute;
+			top: 25%;
+		    transform: translateY(-50%);
+			left: 0%;
+			height: 2px;
+			background-color: fadeout(@b-color, 0%);
+			width: 9.5%;
+		}
+	}
+}
+._dpc__heading{
+	margin-bottom: 10px;
+	@media @media-screen {line-height: 1px;}
+	a{
+    	@media @media-device{
+			font-size: @b-fs + 2px;
+			line-height: @b-fs + 6px;
+		}
+		@media @media-screen{
+			font-size: 2.5vh;
+    		line-height: 3.4vh;
+		}
+		font-weight: 700;
+		position: relative;
+		display: inline-block;
+		z-index: 2;
+		overflow: hidden;
+		transition: 0.4s all;
+		span{
+			position: relative;
+			z-index: 2;
+		}
+		&::after,
+		&::before{
+			content: '';
+			position: absolute;	
+			z-index: 1;
+			width: 100%;
+			left: 0;
+			transition: 0.4s all;				
+		}
+		&::after{
+			height: 2px;
+			background: @b-color;
+			bottom: 0px;
+			opacity: 1;	
+			@media @media-device {display: none}
+		}
+		&::before{
+			top: 0px;
+			height: 100%;
+			background: @mustard;
+			transform: translateX(-100%);
+		}
+		&:hover{
+			transition: 0.5s all;
+			&::before{
+				transition: 0.5s all;
+				transform: translateX(0);
+			}
+			&::after{
+				transition: 0.5s all;
+				opacity: 0;
+				//transform: translateY(100%);
+			}
+		}
+	}
+}
+._dpc__date{
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 22px;
+	/*@media @media-screen{
+		font-size: 1.4vh;
+		line-height: 2.3vh;
+	}*/
+}
+._dpc__autor{
+	font-size: 14px;
+	line-height: 20px;
+	/*@media @media-screen{
+		font-size: 1.4vh;
+		line-height: 2.1vh;
+	}*/
+	span{
+		font-weight: 700;
+	}
+}

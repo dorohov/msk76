@@ -11,6 +11,28 @@ h1, h2, h3, h4, h5, h6{
 }
 i, em{font-style: italic;}
 b, strong{font-weight: 700}
+.heading-block{
+	//padding-left: 235px;
+	position: relative;
+	@media @media-screen{padding: 0 12.5%;}
+}
+.heading-site{
+	font-weight: 800;
+	text-transform: uppercase;
+    @media @media-device{
+		font-size: @b-fs + 14px; //30px;
+		line-height: @b-lh + 18px; //42px;
+		letter-spacing: 3px;
+		margin-bottom: 20px;
+    }
+    @media @media-screen{
+    	font-size: 7.5vh; //72px
+    	line-height: 7.5vh; //72px
+    	margin-bottom: 4vh;
+    	letter-spacing: 7px;
+    }
+
+}
 .index-block-heading{	
 	font-weight: 800;
 	text-transform: uppercase;
