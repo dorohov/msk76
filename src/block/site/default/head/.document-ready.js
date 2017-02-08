@@ -82,3 +82,8 @@ $('#tabs li').eq(1).on('click', function(){
   	$(this).parent().removeClass("on").addClass('off');   	
   	$(this).closest("._iab__backlight").removeClass("on").addClass('off');  
 });*/
+
+$('.btn-journal').on('click', function(){
+  	$(this).toggleClass('is-active');
+  	$("._dipc__journal-list").toggleClass('is-visible');  
+});

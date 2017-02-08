@@ -7,15 +7,19 @@ var h_window = $(window).height(),
 	w_news_preview = $('.news-item__preview').outerWidth(true),
 	h_news_block = $('.news-block').outerHeight(true),
 	h_footer = $('.footer-site').outerHeight(true),
+	//h_journal = $('._dipc__col-right').outerHeight(true),
+	//h_journal_btn = $('._dipc__journal-btn').outerHeight(true),
 	h_content_index = h_window - h_navbar,
 	h_content_scroller = h_window - h_navbar - h_footer, 
 	h_content_scroller_sm = h_window - h_header - h_footer - 100, 
 	h_map = h_window - h_navbar - h_footer - h_heading, 
 	h_team = h_window - h_footer, 
+	//h_journal_list = h_journal - h_journal_btn, 
 	h_content = h_window - h_navbar - h_footer;
 
 if (!device.mobile() || !device.tablet()) {
-	$('.content-block.second').css("min-height", h_content);
+	$('.content-block.second').css("min-height", h_content);	
+	//$('._dipc__journal-list').css("height", h_journal_list);	
 }
 
 if (device.tablet()) {

@@ -1,3 +1,5 @@
+@site-name : "site";
+@import "@{site-name}/var.less";
 /*
 == malihu jquery custom scrollbar plugin ==
 Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
@@ -108,7 +110,7 @@ y-axis
 	.mCSB_scrollTools a + .mCSB_draggerContainer{ margin: 20px 0; }
 
 	.mCSB_scrollTools .mCSB_draggerRail{
-		width: 5px;
+		width: 2px;
 		height: 100%;
 		margin: 0 auto;
 	}
@@ -320,12 +322,12 @@ yx-axis
 @scroll-theme: 		bace;
 @sc-indent:			5px;
 @sc-scroll-indent: 	0px;
-@sc-rail: 			fadeout(@blue-purple, 80%);
-@sc-bar: 			fadeout(@blue-purple, 50%);
-@sc-bar-hover: 		fadeout(@blue-purple, 10%);
-@sc-bar-active: 	fadeout(@blue-purple, 0%);
-@sc-bar-size: 		5px;
-@sc-balls-size: 	5px;
+@sc-rail: 			fadeout(@black, 80%);
+@sc-bar: 			fadeout(@black, 50%);
+@sc-bar-hover: 		fadeout(@black, 10%);
+@sc-bar-active: 	fadeout(@black, 0%);
+@sc-bar-size: 		6px;
+@sc-balls-size: 	6px;
 @sc-balls-visible: 	'';
 
 .include-scrollbar-mCS(
@@ -347,6 +349,7 @@ yx-axis
 		&.mCSB_scrollTools{
 			z-index: 10;
 			right: @scroll-indent;
+			width: @bar-size;
 			.mCSB_draggerContainer{
 				//margin: 25px 0;
 			}
@@ -355,8 +358,9 @@ yx-axis
 				//height: 30px!important;
 				.mCSB_dragger_bar{
 					background-color: @bar; 
-					//width: @bar-size;
+					width: @bar-size;
 					transition: @transition-site;
+					border-radius: 5px;
 				}
 				&:hover{
 					.mCSB_dragger_bar{background-color: @bar-hover;}
@@ -391,15 +395,15 @@ yx-axis
 	@balls-visible: @sc-balls-visible
 ); //bace
 .include-scrollbar-mCS(
-	@theme: 		blue, 
-	@indent: 		40px, 
+	@theme: 		black, 
+	@indent: 		50px, 
 	@scroll-indent: 0px, 
-	@rail: 			fadeout(@blue, 50%), 
-	@bar: 			fadeout(@blue, 0%),
+	@rail: 			fadeout(@black, 0%), 
+	@bar: 			fadeout(@black, 0%),
 	@bar-size: 		@sc-bar-size, 
-	@bar-hover: 	fadeout(@blue, 0%), 
-	@bar-active: 	fadeout(@blue, 0%),
-	@balls-size: 	5px,
+	@bar-hover: 	fadeout(@black, 0%), 
+	@bar-active: 	fadeout(@black, 0%),
+	@balls-size: 	6px,
 	@balls-visible: 0
 ); //opacity
 /* ---------------------------------------- */
