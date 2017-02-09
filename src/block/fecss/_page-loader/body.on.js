@@ -5,4 +5,3 @@ $(document.body).on('click.fecss.page-loader.close-loader', '.page-loader .close
 	
 	$('.page-loader').removeClass('active');
 });
- 

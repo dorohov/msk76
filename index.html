@@ -20,7 +20,21 @@
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=zmiCynB6e65ajX1qWWP6ejDkuCtRk1AC/Mey9RmBJhcOvT4UV2fESqRDGma3Jc0MVPtNxFw7Aj3ARiAsx3B15i7Zn*mpvUAK2Misb/GsPdn0IchUXLXuto/R*L*7q38jLZjg18Wik6gYqjmCQW704OEHNrNQTjtv8WiB4CmoB3A-&pixel_id=1000073085';</script> 
 		<link href="/css/scrollr-position.css" rel="stylesheet" type="text/css" />
 	</head>
-	<body class="index-page">
+	<body class="index-page" id="body-index">		
+		<div class="_czr__loader active page-loader active" >
+	<div class="_czr__preloader-inner" >
+		<div class="_czr__preloader-process-container process-container" >
+			<div class="_czr__preloader-process-level process-level" ></div>
+		</div>
+		<div class="_czr__preloader-center" >
+			<!-- <div class="_azbn__preloader-percent" >75</div> -->
+			<a class="close-loader" href="#not-lazyload" >
+				<div id="_czr__spinner"></div>
+				<!-- <img src="/img/default/preloader.gif" alt=""> -->
+			</a>
+		</div>
+	</div>
+</div> 
 		<nav class="navbar navbar-site" 
 			data-0="position: static;" 
 			data-200="top[linear]: -100%; position:fixed;" 
@@ -31,7 +45,7 @@
 			<div class="navbar-header">
 				<div class="row navbar-header__row ">
 					<div class="cols navbar-brand__cols">
-						<a class="navbar-brand" href="http://zenit-orel.ru/">
+						<a class="navbar-brand" href="/">
 							<img src="/img/default/logotip.png" data-rjs="2" alt="" > 
 						</a>
 					</div>
@@ -42,17 +56,17 @@
 		<div class="cols navbar-collapse-cols">
 			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 				<div class="navbar-collapse-inner">	
-					<ul class="nav navbar-nav">			
+					<ul class="nav navbar-nav">		 	
 						<!--<li><a href="/">Описание</a></li>
 						<li><a href="/layouts.html">Планировки квартир</a></li>
 						<li><a href="/building.html">Ход строительства</a></li>
 						<li><a href="/docs.html">Документы</a></li>
 						<li><a href="/contacts.html">Контакты</a></li>-->
-						<li><a href="#">Описание</a></li>
+						<li><a href="#body-index">Главная</a></li>
 						<li><a href="#">Планировки квартир</a></li>
-						<li><a href="#">Ход строительства</a></li>
-						<li><a href="#">Документы</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="/building.html" >Ход строительства</a></li>
+						<li><a href="http://zenit-orel.ru/proektnaja-deklaracija.php" target="_blank">Документы</a></li>
+						<li><a href="#contacts-scroll" data-menu-top="8000">Контакты</a></li>
 					</ul>
 				</div>
 				<div class="navbar-hamburger">
@@ -496,13 +510,13 @@
 	</h3>
 	<div class="advantages-note _iabbl__advantages-note">
 		<p>Архитектурные элементы здания имеют автоматическую художественную подсветку в ночное время. Она является бесплатной для жителей дома и подчеркивает его красоту, выгодно выделяя среди других архитектурных сооружений</p>
-	</div> 
+	</div>
 	<ul class="_iabbl__switch on" id="tabs">
 		<li class="active">
-			<a href="#on" data-toggle="tab">Вкл</a>
+			<button type="button" data-toggle="tab" data-target="#on">Вкл</button>
 		</li>
 		<li>
-			<a href="#off" data-toggle="tab">Выкл</a>
+			<button type="button" data-toggle="tab" data-target="#off">Выкл</button>
 		</li>
 		<li class="switch-input"></li>
 	</ul>
@@ -679,7 +693,7 @@
 				data-_contacts="top[linear]:100%;"
 				data-end="top[linear]:15%;"					
 			>
-				<h2 class="_icb__heading index-block-heading">Контакты</h2>
+				<h2 class="_icb__heading index-block-heading" id="contacts-scroll">Контакты</h2>
 <div class="_icb__line index-block-heading-line"></div>  		 			
 			</div>
 			<div class="_icb__contacts index-full-block"	
@@ -935,6 +949,7 @@
 <!-- /Yandex.Metrika counter -->
 		<script src="/js/retina.min.js" ></script>
 		<script src="/js/skrollr.min.js" ></script>
+		<script src="/js/skrollr.menu.js"></script>
 		<script type="text/javascript">
 			if(!device.mobile() && !device.tablet()){
 				var s = skrollr.init({
@@ -986,11 +1001,13 @@
 				    	rect12: 				5230
 				    }
 				});
+				skrollr.menu.init(s, {});
 			}
 		</script>
 		<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 		<script src="/js/2gis-map.js"></script>
 		<script src="/js/plax.js"></script>
+		<script src="/js/spin.min.js"></script>
 		<script>
 			if(!device.mobile() && !device.tablet()){
 			  	$(document).ready(function () {        
@@ -1002,6 +1019,35 @@
 					$.plax.enable()
 				});
 			  }
+		</script>
+		<script>
+			if(typeof Spinner != 'undefined') {				
+				var opts = {
+					lines: 11, 
+					length: 24, 
+					width: 9, 
+					radius: 29, 
+					scale: 1, 
+					corners: 1, 
+					color: '#8bcee4', 
+					opacity: 0.2, 
+					rotate: 0, 
+					direction: 1, 
+					speed: 1, 
+					trail: 60, 
+					fps: 20, 
+					zIndex: 2e9, 
+					className: 'spinner',  
+					top: '50%', 
+					left: '50%', 
+					shadow: false,
+					hwaccel: false,
+					position: 'absolute'
+				};
+				var target = document.getElementById('_czr__spinner')
+				var spinner = new Spinner(opts).spin(target);				
+			}
+
 		</script>
 	</body>
 </html> 

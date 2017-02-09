@@ -547,12 +547,17 @@
 		width: 50%;
 		position: relative;
 		z-index: 2;
-		>a{
+		>a,
+		>button{
 			display: block;
 			font-size: @b-fs - 4px;
 			color: @white;
 			padding: 5px 15px;
 			text-align: center;
+			background: none;
+			border: none;
+			text-transform: lowercase;
+			width: 100%;
 			@media @media-device{
 				color: @black;
 			}
@@ -561,7 +566,8 @@
 			}
 		}
 		&.active{
-			>a{
+			>a,
+			>button{
 				color: @black;
 			}
 		}

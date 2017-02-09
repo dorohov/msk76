@@ -4,7 +4,8 @@
 		[[azbntple tpl="/src/block/site/default/head/.html" ]] 
 		<link href="/css/scrollr-position.css" rel="stylesheet" type="text/css" />
 	</head>
-	<body class="index-page">
+	<body class="index-page" id="body-index">		
+		[[azbntple tpl="/src/block/fecss/_page-loader/.html" class="_czr__loader active" ]] 
 		<nav class="navbar navbar-site" 
 			data-0="position: static;" 
 			data-200="top[linear]: -100%; position:fixed;" 
@@ -285,6 +286,7 @@
 		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
 		<script src="{{url-path-js}}/retina.min.js" ></script>
 		<script src="{{url-path-js}}/skrollr.min.js" ></script>
+		<script src="{{url-path-js}}/skrollr.menu.js"></script>
 		<script type="text/javascript">
 			if(!device.mobile() && !device.tablet()){
 				var s = skrollr.init({
@@ -336,11 +338,13 @@
 				    	rect12: 				5230
 				    }
 				});
+				skrollr.menu.init(s, {});
 			}
 		</script>
 		<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 		<script src="{{url-path-js}}/2gis-map.js"></script>
 		<script src="{{url-path-js}}/plax.js"></script>
+		<script src="{{url-path-js}}/spin.min.js"></script>
 		<script>
 			if(!device.mobile() && !device.tablet()){
 			  	$(document).ready(function () {        
@@ -352,6 +356,35 @@
 					$.plax.enable()
 				});
 			  }
+		</script>
+		<script>
+			if(typeof Spinner != 'undefined') {				
+				var opts = {
+					lines: 11, 
+					length: 24, 
+					width: 9, 
+					radius: 29, 
+					scale: 1, 
+					corners: 1, 
+					color: '#8bcee4', 
+					opacity: 0.2, 
+					rotate: 0, 
+					direction: 1, 
+					speed: 1, 
+					trail: 60, 
+					fps: 20, 
+					zIndex: 2e9, 
+					className: 'spinner',  
+					top: '50%', 
+					left: '50%', 
+					shadow: false,
+					hwaccel: false,
+					position: 'absolute'
+				};
+				var target = document.getElementById('_czr__spinner')
+				var spinner = new Spinner(opts).spin(target);				
+			}
+
 		</script>
 	</body>
 </html> 

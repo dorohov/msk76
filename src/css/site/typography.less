@@ -22,8 +22,15 @@ b, strong{font-weight: 700}
     @media @media-device{
 		font-size: @b-fs + 14px; //30px;
 		line-height: @b-lh + 18px; //42px;
-		letter-spacing: 3px;
+		letter-spacing: 2.5px;
 		margin-bottom: 20px;
+    }
+    @media @media-size-xs{
+		letter-spacing: 1px;   	
+    }
+    @media @media-size-xs-5{
+		font-size: @b-fs + 8px; //24px;
+		line-height: @b-lh + 12px; //36px;   	
     }
     @media @media-screen{
     	font-size: 7.5vh; //72px
@@ -31,7 +38,6 @@ b, strong{font-weight: 700}
     	margin-bottom: 4vh;
     	letter-spacing: 7px;
     }
-
 }
 .index-block-heading{	
 	font-weight: 800;
