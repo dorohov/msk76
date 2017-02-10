@@ -7,15 +7,13 @@ var h_window = $(window).height(),
 	w_news_preview = $('.news-item__preview').outerWidth(true),
 	h_news_block = $('.news-block').outerHeight(true),
 	h_footer = $('.footer-site').outerHeight(true),
-	//h_journal = $('._dipc__col-right').outerHeight(true),
-	//h_journal_btn = $('._dipc__journal-btn').outerHeight(true),
 	h_content_index = h_window - h_navbar,
 	h_content_scroller = h_window - h_navbar - h_footer, 
 	h_content_scroller_sm = h_window - h_header - h_footer - 100, 
 	h_map = h_window - h_navbar - h_footer - h_heading, 
 	h_team = h_window - h_footer, 
-	//h_journal_list = h_journal - h_journal_btn, 
-	h_content = h_window - h_navbar - h_footer;
+	h_content = h_window - h_navbar - h_footer,
+	h_content_xs = h_window - h_navbar;
 
 if (!device.mobile() || !device.tablet()) {
 	$('.content-block.second').css("min-height", h_content);	
@@ -30,12 +28,12 @@ if (device.tablet()) {
 	//$('._gpc__preview-cols').css("max-width", w_window);
 }
 if (device.mobile()) {	
-	//$('.second-page').css("min-height", h_window);
+	$('.layouts-page-content').css("min-height", h_content_xs);
 } else{
+	$('.twoGIS-map__block').css("height", h_map);
 	/*$('._adpc__carousel').carousel({
 	    interval : false
 	});	*/
-	$('.twoGIS-map__block').css("height", h_map);
 	//$('.about-team-page-content').css("height", h_team);
 }
 if (device.mobile() || device.tablet()) {

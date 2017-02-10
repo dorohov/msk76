@@ -13,5 +13,5 @@ DG.then(function () {
 		iconAnchor: [14, 125],
 		popupAnchor: [0, 0]
 	});
-	DG.marker([52.975499, 36.098478], {icon: myIcon}).addTo(map).bindPopup('ул. Московская, д.76');
+	DG.marker([52.975027, 36.098462], {icon: myIcon}).addTo(map).bindPopup('ул. Московская, д.76');
 });

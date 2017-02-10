@@ -323,10 +323,10 @@
     	position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-    	background-repeat: no-repeat;
-    	background-position: center;
-    	background-size: contain;
-		background-image: url("@{url-path-img}/icon/icon-tel.png");
+    	//background-repeat: no-repeat;
+    	//background-position: center;
+    	//background-size: contain;
+		//background-image: url("@{url-path-img}/icon/icon-tel.png");
 		right: 0;
 		@media @media-size-xs{
     		width: 32px;
@@ -336,6 +336,7 @@
 			width: 40px;
 			height: 40px;
 		}
+		.icon{width: 100%; height: 100%;}
     }
     span{
     	font-weight: 700;
@@ -397,17 +398,17 @@
 				font-size: @b-fs; 
 			}
 			@media @media-screen{
-				font-size: @b-nav-fs; //16px
-				line-height: @b-nav-lh; //24px
+				font-size: @b-nav-fs - 2px; //14px
+				line-height: @b-nav-lh - 2px; //22px
 				padding: 0; 
 				color: fadeout(@b-nav-color, 0%);		
 				&:hover{
 					color: @b-nav-color-hover;
 				}			
 			}
-			@media @media-size-mdl{
-				font-size: @b-nav-fs - 2px; //14px
-				line-height: @b-nav-lh - 2px; //22px
+			@media @media-size-xxl{
+				font-size: @b-nav-fs; //16px
+				line-height: @b-nav-lh; //24px
 			}
 			&, &:hover, &:focus {
 				background: none;

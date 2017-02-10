@@ -59,8 +59,16 @@ body {
 	}
 }
 .second-page{
+	@media @media-device{
+		&.layouts-page .second-page-container{padding: 0}
+		&.layouts-page .ws-chat-mobile{display: none!important}
+	}
 	.second-page-container{
-		@media @media-device{position: relative; overflow: hidden;}
+		@media @media-device{
+			position: relative; 
+			overflow: hidden;
+			.layouts-page &{padding: 0}
+		}
 		@media @media-size-xs{
 		    padding-left: 40px;
 		    padding-right: 40px;

@@ -9,14 +9,16 @@
 		var note = block.find('.azbn-layout-note');
 		var panel = block.find('.azbn-layout-panel');
 		
-		panel.fadeOut('fast');
-		note.fadeIn('fast');
+		//panel.fadeOut(150);
+		//note.fadeIn(150);
+		panel.toggleClass("is-visible is-hidden");
+		note.toggleClass("is-hidden is-visible");
 		
 		block.attr('data-status', 0);
 		
 	});
 	
-	$(document.body).on('azbn.azbn-layouts-content.setStatus', '.azbn-layouts-content', {}, function(event, status, floor, qty, qtyOne){
+	$(document.body).on('azbn.azbn-layouts-content.setStatus', '.azbn-layouts-content', {}, function(event, status, floor, qty, qtyOne, qtyTwo, qtyThree){
 		event.preventDefault();
 		
 		var block = $(this);
@@ -31,16 +33,22 @@
 			panel.find('.azbn-num').html(floor);
 			panel.find('.azbn-qty').html(qty);
 			panel.find('.azbn-qty-one').html(qtyOne);
+			panel.find('.azbn-qty-two').html(qtyTwo);
+			panel.find('.azbn-qty-three').html(qtyThree);
 			
 			if(_s == 0) {
-				note.hide();
-				panel.fadeIn('fast');
+				//note.hide();
+				//panel.fadeIn(150);
+				panel.toggleClass("is-visible is-hidden");
+				note.toggleClass("is-hidden is-visible ");
 			} else {
 				
 			}
 		} else {
-			panel.hide();
-			note.fadeIn('fast');
+			//panel.hide();
+			//note.fadeIn(150);
+			panel.toggleClass("is-visible is-hidden");
+			note.toggleClass("is-hidden is-visible ");
 		}
 		
 		block.attr('data-status', status);
@@ -54,8 +62,10 @@
 		var floor = parseInt(block.attr('data-floor')) || 0;
 		var qty = parseInt(block.attr('data-qty')) || 0;
 		var qtyOne = parseInt(block.attr('data-qty-one')) || 0;
+		var qtyTwo = parseInt(block.attr('data-qty-two')) || 0;
+		var qtyThree = parseInt(block.attr('data-qty-three')) || 0;
 		
-		$('.azbn-layouts-content').trigger('azbn.azbn-layouts-content.setStatus', [1, floor, qty, qtyOne]);
+		$('.azbn-layouts-content').trigger('azbn.azbn-layouts-content.setStatus', [1, floor, qty, qtyOne, qtyTwo, qtyThree]);
 		
 	});
 	
@@ -67,7 +77,7 @@
 		
 		leavetimeout = setTimeout(function(){
 			$('.azbn-layouts-content').trigger('azbn.azbn-layouts-content.hide');
-		}, 350);
+		}, 250);
 		
 	});
 	
