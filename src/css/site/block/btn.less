@@ -39,6 +39,16 @@
 		padding: 15px;
 	}
 }
+.btn-reviews{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: @b-fs - 2px; //14px
+    border-radius: 30px;
+    letter-spacing: 2.5px;
+	@media @media-device{padding: 15px 20px}	
+	@media @media-screen{padding: 15px 30px}
+}
 .btn-submit{
 	text-align: center;
 	text-transform: uppercase;
@@ -62,6 +72,9 @@
 	font-size: @b-fs - 2px;
 	letter-spacing: 2.7px;
 	border-bottom: 5px solid @mustard;	
+	&:hover{
+		border-bottom: 5px solid fadeout(@mustard, 100%);
+	}
 }
 .btn-journal{		
 	margin-right: 50px;
@@ -125,6 +138,29 @@
 		svg{
 			&.btn-edit{fill: @color-vk}
 			&.btn-del{fill: @color-pdf}
+		}
+	}
+}
+.btn-back-link{	
+	font-weight: 700;
+	padding-left: 65px;
+	text-transform: uppercase;
+	font-size: @b-fs - 2px;
+    letter-spacing: 2.5px;    
+	position: relative;    
+	margin-bottom: 20px;
+	display: inline-block;	
+	svg{
+		position: absolute;
+		top: 50%;
+		left: 0px;
+		transform: translateY(-50%);
+		width: 44px;
+		transition: @transition-site;
+	}
+	&:hover{
+		svg{
+			transform: translate(-10px, -50%);
 		}
 	}
 }

@@ -201,13 +201,14 @@
 	@media @media-device{
 		background: @b-nav-collapse-bg!important;
 		position: fixed;
-		max-height: 100%!important;
 		display: block;		
 		transition: 0.5s all;
 		width: 265px;
 		transform: translateX(~"calc(-100% + 10px)");
 		left: 0;	
-	    height: 100%!important;
+		//max-height: 100%!important;
+	    max-height:  ~"calc(100% + 50px)!important";
+		height: ~"calc(100% + 50px)!important";
 	    top: 0;
         z-index: 1000;
         padding: 0;

@@ -1,0 +1,212 @@
+.apartment-page-content{
+	overflow: hidden;
+	width: 100%;
+	@media @media-device{
+		//&.second{padding: 0}
+	}
+	@media @media-screen{
+		&.second{
+			padding-top: 5vh;
+			padding-bottom: 3vh;
+		}
+	}
+	.container{		
+		@media @media-screen{
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+._flpc__bg-element{
+	position: absolute;
+	z-index: 1;
+	background: #f0f0f0; 
+	border-radius: 50%;
+	@media @media-size-xs {display: none} 
+	&.round1{
+		//width: 1535px;
+		//height: 1535px;
+		//left: -46%;
+    	//bottom: -114%;
+	    left: -88.5vh;
+    	bottom: -91.8vh;
+    	width: 159vh;
+		height: 159vh;
+	}
+	&.round2{
+		width: 705px;
+		height: 705px;
+	    right: -11%;
+    	bottom: -73%;
+	}
+}
+._appc__inner{
+	@media @media-screen{padding: 0 6.5%;}	
+}
+._appc__row{
+	@media @media-device{flex-wrap: wrap;}
+}
+._appc__col-left{
+	@media @media-device{width: 100%; order:1}
+	@media @media-screen{width: 66%;}
+}
+._appc__col-right{
+	@media @media-device{width: 100%; margin-bottom: 35px;}
+	@media @media-screen{width: 34%;}
+}
+._appc__preview-block{
+	position: relative;
+}
+._appc__preview{
+	position: relative;
+	@media @media-size-xs{padding-bottom: 80px;}
+	@media @media-size-sm{padding-bottom: 100px;}	
+	@media @media-screen{
+		padding-top: 3vh; 
+		padding-bottom: 13vh; 
+		//padding-left: 25px;
+	}
+	&::before{
+		content: "";
+		position: absolute;
+		z-index: 1;
+		bottom: 0px;
+		left: 0px;
+		background-image: url("@{url-path-img}/layouts/rosewind.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: left top;
+		@media @media-device{
+			width: 80px;
+			height: 80px;
+		}
+		@media @media-size-xs{
+			width: 60px;
+			height: 60px;
+		    left: 50%;
+			transform: translateX(-50%);
+		}
+		@media @media-screen{
+			width: 11.5vh;
+			height: 11.5vh;
+			//width: 110px;
+			//height: 110px;
+		}
+	}
+	&.deg-plus-90{
+		&::before{
+			background-image: url("@{url-path-img}/layouts/rosewind-plus-90.png");
+		}
+	}
+	&.deg-minus-90{
+		&::before{
+			background-image: url("@{url-path-img}/layouts/rosewind-minus-90.png");
+		}
+	}
+}
+._appc__heading-block{	
+	@media @media-screen{margin: 48px 0 0; padding: 0;}
+}
+._appc__heading-site{
+	font-size: @b-fs + 16px; //32px;
+	line-height: @b-lh + 12px; // 36px;
+	text-transform: none;
+	letter-spacing: 1px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	@media @media-device{br{display: none;}}
+}
+._appc__heading-line{
+	@media @media-screen{width: 75%; right: -40%;}
+	@media @media-size-xxl{width: 85%;}
+}
+._appc__apart-status{
+	font-size: 14px;
+	line-height: 18px;
+	@media @media-device{padding-bottom: 40px;}
+	@media @media-screen{padding-bottom: 5vh;}
+	span{
+		padding: 0 10px;
+		&.free{background-color: @color-free; color: @white}
+		&.bay{background-color: @color-bay; color: @white}
+		&.lock{background-color: @color-lock}
+	} 
+}
+._appc__apart-area{
+	font-size: @b-fs + 4px; // 20
+	line-height: @b-lh + 6px; // 30
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	margin-bottom: 20px;
+}
+._appc__apart-row{
+	@media @media-device{padding-bottom: 35px;}
+	@media @media-screen{padding-bottom: 5vh;}	
+}
+._appc__apart-cols{
+	font-size: 14px;    
+	border-right: 1px solid @b-color;
+    margin-right: 15px;
+    &:last-child{margin-right: 0; border: 0}
+	._num{
+		font-size: @b-fs + 4px; // 20
+		line-height: @b-lh + 6px; // 30
+		font-weight: 700;
+	}
+}
+._appc__apart-item{
+	font-size: @b-fs - 2px; // 14
+	line-height: @b-lh + 6px; // 30
+	margin: 0 -5px;
+	.cols{
+		padding-left: 5px;
+		padding-right: 5px;
+	}	
+	span{
+		font-weight: 700;
+	}
+	&._big{		
+		span{
+			font-size: @b-fs + 12px; // 28
+		}		
+		.icon-ruble{
+			width: 20px;
+			height: 20px;
+			margin-left: 5px;
+		}
+	}
+	&._small{
+		span{
+			font-size: @b-fs + 4px; // 20
+		}		
+		.icon-ruble{
+			width: 13px;
+			height: 13px;
+			margin-left: 5px;
+		}
+	}
+	._left{
+		width: 25%;
+	}
+	._right{
+		width: 75%;
+	}
+}
+._appc__btn-block{
+	@media @media-device{padding-top: 20px;}
+	@media @media-screen{padding-top: 7.5vh;}
+	.row{
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	._left{		
+		@media @media-screen{width: 100%; margin-bottom: 30px;}
+		@media @media-size-xxl{width: 55%; margin-bottom: 0}
+	}
+	._right{
+		@media @media-screen{width: 100%; padding-left: 40px;}
+		@media @media-size-xxl{width: 45%; text-align: right; padding-left: 15px;}
+	}
+}
