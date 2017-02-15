@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
 	<head>
-		[[azbntple tpl="/src/block/site/default/head/.html" ]] 
-		<link href="/css/scrollr-position.css" rel="stylesheet" type="text/css" />
+		[[azbntple tpl="/src/block/site/default/head/.html" ]] 		
 	</head>
 	<body class="index-page" id="body-index">		
 		[[azbntple tpl="/src/block/fecss/_page-loader/.html" class="_czr__loader active" ]] 
@@ -282,109 +281,13 @@
 			data-_rect8-300="top[linear]:-120%; visibility[linear]: hidden;">
 		</div>
 		
-		[[azbntple tpl="8/src/block/fecss/_page-loader/.html" class="_czr__loader active" ]]
 		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
+		[[azbntple tpl="/src/block/site/default/head/2gisMap.html" ]]
+		[[azbntple tpl="/src/block/site/default/head/validationEngine.html" ]]
+		[[azbntple tpl="/src/block/site/default/head/skrollr.html" ]]
 		<script src="{{url-path-js}}/retina.min.js" ></script>
-		<script src="{{url-path-js}}/skrollr.min.js" ></script>
-		<script src="{{url-path-js}}/skrollr.menu.js"></script>
-		<script type="text/javascript">
-			if(!device.mobile() && !device.tablet()){
-				var s = skrollr.init({
-					edgeStrategy: 'set',
-					constants: {
-						header: 				800,
-						advantages: 			870,
-						header__flat: 			600,
-						composition: 			1050,
-						icon__down: 			1700,
-				    	equipmen: 				1000,
-				    	equipmen__item: 		1250,
-				    	access: 				1850,
-				    	access__item: 			1850,
-				    	safety: 				2700,
-				    	safety__item: 			2700,
-				    	beautification: 		3200,
-				    	beautification__item: 	3200,
-				    	parking: 				3750,
-				    	parking__item: 			3750,
-				    	backlight: 				4330,
-				    	flat: 					4960,
-				    	complex: 				5100,
-				    	locaion: 				5800,
-				    	map: 					6050,
-				    	contacts: 				6050,
-				    	contacts__item: 		6150,
-				    	footer: 				6150,
-
-				    	round1: 				1000,
-				    	round2: 				1350,
-				    	round3: 				1950,
-				    	round4: 				2850,
-				    	round5: 				4900,
-				    	round6: 				4950,
-				    	round7: 				6000,
-
-				    	rect1: 					1000,
-				    	rect2: 					850,
-				    	rect3: 					2000,
-				    	rect4: 					2350,
-				    	rect5: 					2625,
-				    	rect6: 					3000,
-				    	rect7: 					3400,
-				    	rect8: 					3550,
-				    	rect9: 					3880,
-				    	rect10: 				5800,
-				    	rect11: 				5590,
-				    	rect12: 				5230
-				    }
-				});
-				skrollr.menu.init(s, {});
-			}
-		</script>
-		<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-		<script src="{{url-path-js}}/2gis-map.js"></script>
-		<script src="{{url-path-js}}/plax.js"></script>
-		<script src="{{url-path-js}}/spin.min.js"></script>
-		<script>
-			if(!device.mobile() && !device.tablet()){
-			  	$(document).ready(function () {        
-					$('.header-preview .parallax-plax').plaxify()
-					$('._hp__layer1').plaxify({"xRange":10,"yRange":5,"invert":true,})
-					//$('.bg-rect.item4').plaxify({"xRange":5,"yRange":50,"invert":true,})
-					//$('._hp__layer2').plaxify({"xRange":5,"yRange":5})
-					//$('._hp__layer3').plaxify({"xRange":5,"yRange":5})
-					$.plax.enable()
-				});
-			  }
-		</script>
-		<script>
-			if(typeof Spinner != 'undefined') {				
-				var opts = {
-					lines: 11, 
-					length: 24, 
-					width: 9, 
-					radius: 29, 
-					scale: 1, 
-					corners: 1, 
-					color: '#8bcee4', 
-					opacity: 0.2, 
-					rotate: 0, 
-					direction: 1, 
-					speed: 1, 
-					trail: 60, 
-					fps: 20, 
-					zIndex: 2e9, 
-					className: 'spinner',  
-					top: '50%', 
-					left: '50%', 
-					shadow: false,
-					hwaccel: false,
-					position: 'absolute'
-				};
-				var target = document.getElementById('_czr__spinner')
-				var spinner = new Spinner(opts).spin(target);				
-			}
-
-		</script>
+		[[azbntple tpl="/src/block/site/default/head/plax.html" ]]
+		[[azbntple tpl="/src/block/site/default/head/spinner.html" ]]
+		[[azbntple tpl="/src/block/site/default/head/metrika.html" ]]
 	</body>
 </html> 
