@@ -113,6 +113,19 @@
 	a{
 		border: none;
 		display: block;
+		width: 78px;
+		height: 25px;
+		svg{
+			width: 100%; 
+			height: 100%; 
+			fill: @white;
+			transition: @transition-site;
+		}
+		&:hover{
+			svg{
+				fill: @mustard-light;
+			}
+		}
 		img{
 			@media @media-size-xs{margin: 0 auto}
 			@media @media-size-mdl{margin: 0 auto}

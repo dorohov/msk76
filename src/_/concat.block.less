@@ -394,6 +394,19 @@
 	a{
 		border: none;
 		display: block;
+		width: 78px;
+		height: 25px;
+		svg{
+			width: 100%; 
+			height: 100%; 
+			fill: @white;
+			transition: @transition-site;
+		}
+		&:hover{
+			svg{
+				fill: @mustard-light;
+			}
+		}
 		img{
 			@media @media-size-xs{margin: 0 auto}
 			@media @media-size-mdl{margin: 0 auto}
@@ -1319,6 +1332,7 @@ textarea._frs__form-control{
 			background-image: url("@{url-path-img}/layouts/rosewind-minus-90.png");
 		}
 	}
+	img{margin: 0 auto}
 }
 ._appc__heading-block{	
 	@media @media-screen{margin: 3px 0 0; padding: 0;}
@@ -2408,6 +2422,7 @@ textarea._frs__form-control{
 		position: absolute;
 		left: 0;
 		top: -40px;
+		transform: scale(1.01);
     }
 	@media @media-size-xxl{ 
 		top: -60px;

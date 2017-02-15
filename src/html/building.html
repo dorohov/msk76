@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
 	<head>
-		[[azbntple tpl="/src/block/site/default/head/.html" ]] 
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html"
+			title="Ход строительства дома по ул. Московская, 76"
+			description="Этапы строительства, фотографии объекта - нового 12-этажного кирпично‑монолитного дома по адресу: г. Орёл, ул. Московская, 76."
+		]] 
 	</head>
 	<body class="second-page">
 		<nav class="navbar navbar-site">	
@@ -16,19 +20,9 @@
 		[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site index" dd-color="white"]]
 		
 		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
-		<link rel="stylesheet" type="text/css" href="{{url-path-css}}/lightgallery.css" />
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$('.imageGallery').lightGallery({
-				    thumbnail:false,
-				    download: false
-				}); 
-			})
-		</script>
-		<!-- light Gallery -->
-		<script src="{{url-path-plugins}}/lightGallery/js/lightgallery.js"></script>
-		<script src="{{url-path-js}}/retina.min.js" ></script>
+		[[azbntple tpl="/src/block/site/default/head/light-gallery.html" ]]
 		
+		<script src="{{url-path-js}}/retina.min.js" ></script>		
 		[[azbntple tpl="/src/block/site/default/head/metrika.html" ]]
 	</body>
 </html> 
