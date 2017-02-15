@@ -15,6 +15,10 @@
 		width: 100%;
 		order: 1;
 	}
+	@media @media-size-xs{
+		padding-left: 75px;
+		position: relative;
+	}
 	@media @media-screen{width: 24%;}
 }
 ._ilb__cols-right{
@@ -40,6 +44,15 @@
 		line-height: @b-lh + 76px; //100
 		margin-bottom: 15px;
 	}
+	@media @media-size-xs{
+		position: absolute;
+		left: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: @b-fs + 74px; //90
+		line-height: @b-lh + 46px; //70
+		margin-bottom: 0;
+	}
 	@media @media-screen{
 		margin-bottom: 1.5vh; //15px
 		font-size: @b-fs + 184px; //200
@@ -51,6 +64,9 @@
 	@media @media-device{
 		font-size: @b-fs + 34px; //50
 		line-height: @b-lh + 32px; //56
+	}
+	@media @media-size-xs{
+		line-height: @b-lh + 20px; //44
 	}
 	@media @media-screen{
 		font-size: @b-fs + 44px; //60

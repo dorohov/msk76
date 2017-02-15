@@ -91,3 +91,54 @@ textarea._frs__form-control{
 ._frs__btn{
 	text-align: center;
 }
+
+.form-inline__input{
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 35px;
+	@media @media-size-xs{flex-wrap: wrap;}
+}
+.form-inline__label{
+	font-size: @b-fs + 4px; //20px;
+	line-height: @b-lh - 4px; //20px;
+	@media @media-size-xs{margin-bottom: 5px;}
+	&._name{
+	    width: 10%;
+    	min-width: 45px;
+		@media @media-size-xs{width: 100%;}
+	}
+	&._phone{
+		width: 20%;
+		min-width: 88px;
+		@media @media-size-xs{width: 100%;}
+	}
+	&._comment{
+		width: 16%;
+		min-width: 145px;
+		@media @media-size-xs-p{width: 100%;}
+	}
+}
+.form-inline__form-control{
+	display: block;
+	background:	none;
+	height: 25px;
+	border: 0;
+	border-bottom: 1px solid @b-form-i-border;
+	transition: @transition-site;
+	&._name{
+		width: 90%; 
+		@media @media-size-xs{width: 100%;}
+	}
+	&._phone{
+		width: 80%;
+		@media @media-size-xs{width: 100%;}
+	}
+	&._comment{
+		width: 84%;
+		@media @media-size-xs{width: 100%;}
+	}
+	&:focus{ 	
+		border-color: @b-form-i-border-f;
+		outline: none;
+	}
+}

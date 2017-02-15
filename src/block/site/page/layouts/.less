@@ -71,7 +71,7 @@
 	@media @media-size-sm{
 	    width: 300px;
     	height: 300px;
-		padding: 35px;
+		padding: 35px 55px;
 		right: 5px;
 	}
 	@media @media-size-sm-l{
@@ -204,19 +204,26 @@
 	._qty-app{
 		font-weight: 600;
 		font-family: @neusa;
-		//font-size: 85px;
-		//line-height: 62px; 
 		@media @media-size-xs{
 			font-size: 35px;
     		line-height: 22px;
 		}
 		@media @media-size-sm{
-			font-size: 45px;
-    		line-height: 32px;
+			//font-size: 45px;
+    		//line-height: 32px;
+			font-size: 70px;
+			line-height: 50px;
 		}
 		@media @media-screen{
 			font-size: 8.8vh;
-			line-height: 6.5vh;
+			line-height: 5.2vh;
+		}
+		&::after{
+			content: ' кв.';
+			font-family: @open;
+			font-weight: 400;
+			font-size: @b-fs ;
+			line-height: @b-lh - 4;
 		}
 	}
 	._qty{
@@ -231,11 +238,17 @@
 		}
 		@media @media-size-sm{
 			font-size: 20px;
-    		line-height: 26px;
+    		//line-height: 26px;
+			line-height: 14px;
+			margin-bottom: 12px;
+
 		}
 		@media @media-screen{
 			font-size: 24px;
-			line-height: 30px; 
+			//line-height: 26px;    
+			line-height: 16px;
+    		margin-bottom: 14px;
+ 
 
 		}
 		@media @media-size-mdl{padding-right: 10px;}

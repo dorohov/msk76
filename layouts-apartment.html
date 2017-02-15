@@ -19,7 +19,7 @@
 <link href="/css/site.css" rel="stylesheet">
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=zmiCynB6e65ajX1qWWP6ejDkuCtRk1AC/Mey9RmBJhcOvT4UV2fESqRDGma3Jc0MVPtNxFw7Aj3ARiAsx3B15i7Zn*mpvUAK2Misb/GsPdn0IchUXLXuto/R*L*7q38jLZjg18Wik6gYqjmCQW704OEHNrNQTjtv8WiB4CmoB3A-&pixel_id=1000073085';</script> 
 	</head>
-	<body class="second-page layouts-page">
+	<body class="second-page">
 		<nav class="navbar navbar-site">	
 			 <div class="container">		
 	<div class="row navbar-row">		
@@ -39,19 +39,21 @@
 			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 				<div class="navbar-collapse-inner">	
 					<ul class="nav navbar-nav">		 	
-						<li><a href="/">Главная</a></li>
-						<li><a href="#">Планировки квартир</a></li>
-						<li><a href="/building.html" >Ход строительства</a></li>
-						<li><a href="http://zenit-orel.ru/proektnaja-deklaracija.php" target="_blank">Документы</a></li>
-						<li><a href="/#contacts-scroll" data-menu-top="8000">Контакты</a></li>
+						<li><a href="/"><span>Главная</span></a></li>
+						<li><a href="/layouts.html"><span>Планировки квартир</span></a></li>
+						<li><a href="/building.html" ><span>Ход строительства</span></a></li>
+						<li><a href="/docs.html"><span>Документы</span></a></li>
+						<li><a href="/#contacts-scroll" data-menu-top="8000"><span>Контакты</span></a></li> 
 					</ul>
 				</div>
-				<div class="navbar-hamburger">
-					<button class="hamburger hamburger--vortex" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".content-wrap">
-						<span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-						</span>
-					</button>
+				<div class="navbar-collapse-hamburger">	
+					<div class="navbar-hamburger">
+						<button class="hamburger hamburger--vortex" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".content-wrap">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+					</div>
 				</div>
 			</div>
 			
@@ -77,16 +79,16 @@
 <div class="container">
 	<div class="_appc__inner"> 	
 		<a href="/layouts-floor.html" class="_appc__back-link btn-back-link">
-			<svg class="icon-svg icon-back _appc__icon" role="img">
+			<span><svg class="icon-svg icon-back _appc__icon" role="img">
 	<use xlink:href="/img/svg/sprite.svg#back"></use>
-</svg>
+</svg></span>
 			Выбрать квартиру 
 		</a>
 		<div class="row _appc__row">
 			<div class="cols _appc__col-left">				
 				<div class="_appc__preview-block">
 					<div class="_appc__preview">
-						<img src="/img/apartament/01/item1.png" alt="">
+						<img src="/img/apartament/01/item1-min.png" alt="">
 					</div>
 				</div>
 			</div>
@@ -136,7 +138,7 @@
 				<div class="_appc__btn-block">
 					<div class="row">
 						<div class="cols _left">
-							<a href="#" class="btn-site btn-mustard btn-reviews">Заявка на просмотр</a>
+							<a href="/reviews-apartment.html" class="btn-site btn-mustard btn-reviews">Заявка на просмотр</a>
 						</div>
 						<div class="cols _right">
 							<a href="#" class="btn-site btn-link">Версия для печати</a>
@@ -148,10 +150,12 @@
 		</div>
 		
 	</div>
+	<div class="_appc__bg-element round1"></div>
+	<div class="_appc__bg-element round2"></div>
+	<div class="_appc__bg-element round3"></div>
 </div>
 
-<div class="_appc__bg-element round1"></div>
-<div class="_appc__bg-element round2"></div>
+
 			</div>
 		</div>
 		<footer class="footer-site index">	

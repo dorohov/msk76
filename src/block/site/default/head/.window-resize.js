@@ -40,6 +40,7 @@ if (device.mobile() || device.tablet()) {
 	$("._iabai__cols.one").prependTo($("._iabai__row._two"));
 	$("._ifbc__btn-block").appendTo($("._ifb__complex"));
 	$(".bg-element").remove();
+	//$('.second-page .navbar-nav li a').removeAttr("data-menu-top");	
 
 	//$('.navbar').addClass('navbar-fixed-top');
 	//$('.navbar').css("max-width", w_window);

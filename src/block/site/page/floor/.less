@@ -1,15 +1,19 @@
 .floor-page-content{
-	overflow: hidden;
 	width: 100%;
-	@media @media-device{
-		//&.second{padding: 0}
-	}
 	@media @media-screen{
+		overflow: hidden;
 		&.second{
 			padding-top: 5vh;
 		}
 	}
-	.container{height: 100%;}
+	.container{
+		height: 100%;
+		@media @media-device{			
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	}
 }
 
 ._flpc__bg-element{
@@ -17,7 +21,7 @@
 	z-index: 1;
 	background: #f0f0f0; 
 	border-radius: 50%;
-	@media @media-size-xs {display: none} 
+	@media @media-device {display: none} 
 	&.round1{
 		//width: 1535px;
 		//height: 1535px;

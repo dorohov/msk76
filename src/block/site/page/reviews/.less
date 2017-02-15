@@ -1,0 +1,118 @@
+.reviews-page-content{
+	@media @media-device{
+		.container{padding: 0; width: 100%;}
+	}
+	@media @media-screen{
+		overflow: hidden;
+	}
+}
+
+._rvpc__bg-element{
+	position: absolute;
+	z-index: 1;
+	@media @media-size-xs {display: none} 
+	&.round1{
+		bottom: 18%;
+		left: 15%;
+		width: 27vh;
+		height: 27vh;
+		background: #a2d8e9;
+		border-radius: 50%;
+		@media @media-size-sm {
+			left: -15%;
+			bottom: 15%;
+		}
+	}
+	&.round2{
+  		background-color: fadeout(@blue-gray-light, 20%);
+		right: 22.5%;
+		bottom: 12%;
+		width: 6.5vh;
+		height: 10.5vh;
+	}
+	&.round3{
+		width: 315px;
+		height: 33px;
+	    right: 21%;
+    	bottom: 67%;
+		border-radius: 0;
+		background: @green-yellow-light;
+    	transform: rotate(25deg);
+		@media @media-size-sm {right: -10%;} 
+	}
+	&.rect1{
+		width: 38px;
+  		height: 100px;
+		left: 27.5%;
+		bottom: 41%;
+  		background-color: @blue-light;
+		@media @media-size-sm {left: 10%;} 
+	}
+	&.rect2{
+		width: 160px;
+  		height: 18px;
+	    left: 42.5%;
+    	top: 25%;
+    	transform: rotate(25deg);
+  		background-color: @blue-gray-light;
+	}
+}
+.form-reviews__row{flex-wrap: wrap;}
+.form-reviews__col-6{
+	width: 50%;
+	@media @media-size-xs-p{width: 100%;}
+}
+.form-reviews__col-12{width: 100%}
+.form-reviews__note{
+	font-size: @b-fs + 4px; // 20
+	line-height: @b-lh + 4px; //28
+	@media @media-device{margin-bottom: 35px;}
+	@media @media-screen{margin-bottom: 4vh;}
+}
+.form-reviews__btn-block{
+	@media @media-screen{
+		padding-top: 20px;
+		text-align: right; 
+	}
+}
+.form-reviews__btn{
+	@media @media-screen{
+		padding: 12px 35px;
+		font-size: @b-fs - 2px;
+	}
+}
+._rvpc__inner{
+	position: relative;
+	z-index: 2;
+    margin: 0 auto;
+    max-width: 910px;
+    .reviews-call-page-content &{max-width: 690px;}
+}
+._rvpc__btn-close{
+	text-align: right;
+	margin-bottom: 25px;
+}
+._rvpc__heading-block{
+	padding: 0;
+}
+._rvpc__heading-site{
+	text-transform: none;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	@media @media-screen{
+		font-size: @b-fs + 16px;
+		line-height: @b-lh + 26px;
+		margin-bottom: 6vh;
+	}
+}
+._rvpc__heading-line{
+	@media @media-screen{
+		width: 40%;
+		border-bottom: 1px solid @black;
+		height: 0;
+		transform: none;
+		&._message{width: 55%}
+	}
+}
+._rvpc__{}
+._rvpc__{}
