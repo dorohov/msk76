@@ -81,7 +81,7 @@
 		
 	});*/
 	
-	$(document.body).on('click.azbn', '.azbn-floor-content svg.floor-svg .floor-polygon', {}, function(event){
+	$(document.body).on('click.azbn', '.azbn-floor-content svg .floor-polygon', {}, function(event){
 		event.preventDefault();
 		
 		var block = $(this);
