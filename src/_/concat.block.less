@@ -396,6 +396,7 @@
 		display: block;
 		width: 78px;
 		height: 25px;
+		margin:0 auto;
 		svg{
 			width: 100%; 
 			height: 100%; 
@@ -2097,12 +2098,12 @@ textarea._frs__form-control{
 }
 ._flpc__col-left{
 	@media @media-device{width: 100%;}
-	@media @media-screen{width: 81%;}
+	@media @media-screen{width: 75%;/*width: 81%;*/}
 	@media @media-size-md{width: 75%;}
 }
 ._flpc__col-right{
 	@media @media-device{width: 100%;}
-	@media @media-screen{width: 19%;}
+	@media @media-screen{width: 25%;/*width: 19%;*/}
 	@media @media-size-md{width: 25%;}
 }
 ._flpc__svg{
@@ -2370,6 +2371,7 @@ textarea._frs__form-control{
 	fill: @mustard-light;
 	opacity: 0;
 	cursor: pointer;
+	pointer-events: visible;
 	&:hover{
 		opacity: 0.6;		
 	}
@@ -2421,11 +2423,12 @@ textarea._frs__form-control{
     @media @media-screen{
 		position: absolute;
 		left: 0;
-		top: -40px;
-		transform: scale(1.01);
+		top: 0px;
+		transform: scale(1.07);
     }
 	@media @media-size-xxl{ 
 		top: -60px;
+		transform: scale(1.01);
 	}
 }
 .layout-polygon{
@@ -2519,7 +2522,7 @@ textarea._frs__form-control{
 		height: 100%;
 	}
 	@media @media-size-mdl{width: 100%;}
-	@media @media-size-xl{width: 80%;}
+	@media @media-size-xl{width: 90%;}
 	@media @media-size-xxl{width: 70%;}
 }
 .layout-panel__floor{

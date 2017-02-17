@@ -1,5 +1,5 @@
 $(function(){
-	
+	//$('.btn-back-link').popover({trigger : 'hover'});
 	window.houseData = {};
 	
 	var __getHumanNum = function(i) {
@@ -64,35 +64,50 @@ $(function(){
 					
 					var img_index = p_o['floor_id'];
 					
-					if(img_index > 2 && img_index < 6) {
-						img_index = '3-5';
-					}
-					
-					if(img_index > 5 && img_index < 10) {
-						img_index = '6-9';
-					}
-					
-					if(img_index > 9) {
-						img_index = '10-12';
-					}
-					
 					//$('#svg-bg image').attr('xlink:href', '/img/layouts/bg-apartment-' + img_index + '.png')
 					
 					$.ajax({
-						url : '/img/svg/floors/' + img_index + '.svg',
+						url : '/img/svg/floors/' + img_index + '.svg?v=' + (new Date().getTime()),
 						type : 'GET',
 						dataType : 'text',
 						success : function(data){
 							var oldsvg = $('svg.floor-svg');
 							$(data).insertAfter(oldsvg);
 							oldsvg.empty().remove();
+							
+							
+							$('.floor-apartment .floor-polygon')
+								/*.each(function(index){
+									
+									var poly = $(this);
+									
+									console.log(poly.attr('data-flat_id'));
+									
+									poly.parent().parent().parent()
+										.attr('data-content', '123')
+										.attr('data-toggle', 'popover')
+										//.attr('data-trigger', 'hover')
+										.attr('title', 'Dismissible popover')
+										.popover({trigger : 'hover'})
+									;
+									
+								})*/
+								.on('mouseover', function(){
+									
+									var poly = $(this);
+									console.log(poly.offset());
+									
+								})
+								
+							;
+							
+							
 						}
 					});
 					
 					
-					var flats = window.houseData.floor[p_o['floor_id']];
 					
-					console.log(flats);
+					//console.log(flats);
 					
 				}
 				
@@ -127,6 +142,8 @@ $(function(){
 					$('.azbn__points__price').html(flat.price.triads());
 					$('.azbn__points__price__of_m2').html((Math.ceil(flat.price / layout.total_area)).triads());
 					
+					$('title').html($('title').html().replace(new RegExp('%','g'), layout.rooms_number));
+					
 					if(flat.is_sold) {
 						$('.azbn__points__free').empty().remove();
 						$('.azbn__points__is_reserved').empty().remove();
@@ -142,11 +159,61 @@ $(function(){
 				
 			}
 			
+		} else if($('.layouts-page-content').length) {
+			
+			var by_rooms = {};
+			var is_free = {}
+			
+			for(var j in window.houseData.floor) {
+				
+				by_rooms[j] = {
+					1 : 0,
+					2 : 0,
+					3 : 0,
+				};
+				
+				is_free[j] = 0;
+				
+				var flats = window.houseData.floor[j];
+				
+				for(var i in flats) {
+					var flat_id = flats[i];
+					
+					var flat = window.houseData.points[flat_id];
+					var layout_id = flat.layout;
+					var layout = window.houseData.layouts[layout_id];
+					var flat_d = layout.layoutstoreys[0];
+					
+					if(!flat.is_sold && !flat.is_reserved) {
+						is_free[j]++;
+						by_rooms[j][layout.rooms_number]++;
+					}
+					
+				}
+				
+			}
+			
+			$('.layouts-page-content .layout-polygon').each(function(){
+				
+				var poly = $(this);
+				var floor_id = parseInt(poly.attr('data-floor-id'));
+				
+				poly
+					.attr('data-qty', is_free[floor_id])
+					.attr('data-qty-one', by_rooms[floor_id][1])
+					.attr('data-qty-two', by_rooms[floor_id][2])
+					.attr('data-qty-three', by_rooms[floor_id][3])
+				;
+				
+			})
+			
+			console.log(by_rooms);
+			
 		}
 		
 	});
 	
-	$.getJSON('/json/content/houseData.json', function(data){
+	$.getJSON('/json/content/houseData.json?v=' + (new Date().getTime()), function(data){
 		window.houseData = data;
 		$(document.body).trigger('azbn.load.houseData');
 	});

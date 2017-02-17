@@ -1,0 +1,47 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1061 651" class="floor-svg" >
+	<g id="svg-bg">
+		<image x="0" y="0" width="1060" height="650" xlink:href="/img/layouts/bg-apartment-3-5.png"/>
+	</g>
+	<g class="floor-apartment" id="apartment-1" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="441"
+			points="2,311 2,200 9,200 9,160 18,160 18,162 146,162 146,152 388,152 388,162 473,162 473,161 480,161 480,374 375,374 375,371 348,371 348,374 287,374 287,378 280,378 280,374 229,374 154,374 154,322 2,322 " />
+	</g>
+	<g class="floor-apartment" id="apartment-2" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="431"
+			points="2,315 161,315 161,367 229,367 229,381 226,381 226,407 229,407 229,416 287,416 287,638 280,638 280,637 211,637 194,619 194,621 184,621 184,606 79,606 79,599 41,599 41,430 2,430 "/>
+	</g>
+	<g class="floor-apartment" id="apartment-3" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="771"
+			points="366,416 366,419 392,419 392,416 480,416 480,638 473,638 473,637 287,637 287,638 280,638 280,416 "/>
+	</g>
+	<g class="floor-apartment" id="apartment-4" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="408"
+			points="473,416 560,416 560,419 586,419 586,416 671,416 671,638 665,638 665,637 480,637 480,638 473,638 "/>
+	</g>
+	<g class="floor-apartment" id="apartment-5" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="395"
+			points="984,416 984,565 979,565 979,607 971,607 971,605 872,605 872,606 767,606 767,621 759,621 759,620 742,637 671,637 671,638 665,638 665,416 751,416 751,419 778,419 778,416 866,416 "/>
+	</g>
+	<g class="floor-apartment" id="apartment-6" >
+		<polygon 
+		class="floor-polygon" 
+			data-flat_id="382"
+			points="858,154 858,139 1055,139 1055,430 1036,430 1036,561 971,561 971,423 858,423 858,349 863,349 863,323 858,323 "/>
+	</g>
+	<g class="floor-apartment" id="apartment-7" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="371"
+			points="884,4 1040,4 1040,2 1048,2 1048,42 1055,42 1055,146 866,146 866,315 837,315 837,312 812,312 812,315 708,315 708,241 645,241 635,241 635,213 639,213 686,165 686,162 701,162 701,42 858,42 858,2 866,2 866,4 "/>
+	</g>
+</svg>
