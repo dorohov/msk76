@@ -45,6 +45,55 @@ body {
 		}
 	}
 }
+a{
+	color: @b-color-a;
+	transition: @transition-site;
+	&, &:focus, &:hover{
+		text-decoration: none;
+	}
+	&:hover{
+		color: darken(@b-color-a, 15%);
+	}
+	&[href^="mailto:"],
+	&[href^="tel:"]{
+		&, &:focus, &:hover{
+			color: @b-color-a;
+			text-decoration: none; 
+		}
+	}
+}
+*:focus{outline: 0!important;}
+
+ol{
+	margin-left: 20px;
+}
+ul{
+	margin-left: 20px;
+	/*&.ul-site{
+		list-style: none;
+		margin-left: 0;
+		li{
+			position: relative;
+			padding-left: 15px;
+			margin-bottom: 5px;
+			&:before{
+				content: '';
+				position: absolute;
+				top: 50%;
+				top: 10px;
+				left: 3px;
+				width: 2px;
+				height: 2px;
+				background: @black;
+				border-radius: 50%;
+				display: block;   
+				text-align: center; 
+				//transform: translateY(-50%);
+				@media @media-size-xs{top: 10px;}
+			}
+		}
+	}*/
+}
 .index-page{
 	@media @media-size-xs-l{
 		.container{
@@ -109,6 +158,21 @@ body {
 	color: @white;
 	z-index: 99999;
 }
+.content-block{
+	&.second{		
+		@media @media-device{
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		@media @media-screen{    
+			min-height: 80.4vh;
+			position: relative;
+			//padding-top: 115px;
+			padding-top: 11vh;
+			padding-bottom: 6vh;
+		}
+	}
+}
 
 /*
 .site-wrap{
@@ -158,70 +222,7 @@ body {
 		}
 	}
 }*/
-a{
-	color: @b-color-a;
-	transition: @transition-site;
-	&, &:focus, &:hover{
-		text-decoration: none;
-	}
-	&:hover{
-		color: darken(@b-color-a, 15%);
-	}
-	&[href^="mailto:"],
-	&[href^="tel:"]{
-		&, &:focus, &:hover{
-			color: @b-color-a;
-			text-decoration: none; 
-		}
-	}
-}
-*:focus{outline: 0!important;}
 
-ol{
-	margin-left: 20px;
-}
-ul{
-	margin-left: 20px;
-	/*&.ul-site{
-		list-style: none;
-		margin-left: 0;
-		li{
-			position: relative;
-			padding-left: 15px;
-			margin-bottom: 5px;
-			&:before{
-				content: '';
-				position: absolute;
-				top: 50%;
-				top: 10px;
-				left: 3px;
-				width: 2px;
-				height: 2px;
-				background: @black;
-				border-radius: 50%;
-				display: block;   
-				text-align: center; 
-				//transform: translateY(-50%);
-				@media @media-size-xs{top: 10px;}
-			}
-		}
-	}*/
-}
-
-.content-block{
-	&.second{		
-		@media @media-device{
-			padding-top: 30px;
-			padding-bottom: 30px;
-		}
-		@media @media-screen{
-			position: relative;
-			//padding-top: 115px;
-			padding-top: 11vh;
-			padding-bottom: 6vh;
-		}
-	}
-}
 /*
 .soc-witget-block{
 	margin-bottom: 55px;
