@@ -85,7 +85,7 @@
 		event.preventDefault();
 		
 		var block = $(this);
-		var floor = parseInt(block.attr('data-apartment-id')) || 0;
+		var floor = parseInt(block.attr('data-flat_id')) || 0;
 		
 		var _href = $('.azbn-floor-content').attr('data-base-url') || '';
 		

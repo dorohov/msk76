@@ -1,7 +1,7 @@
 
 <div class="container">
 	<div class="{{prefix}}inner"> 	
-		<a href="javascript:history.back();" class="{{prefix}}back-link btn-back-link">
+		<a href="#view-flat" class="{{prefix}}back-link btn-back-link azbn-go2-floor-link">
 			<span>[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="back" class="{{prefix}}icon" ]]</span>
 			Выбрать квартиру
 			<!-- /layouts-floor.html -->
@@ -10,48 +10,50 @@
 			<div class="cols {{prefix}}col-left">				
 				<div class="{{prefix}}preview-block">
 					<div class="{{prefix}}preview">
-						<img class="azbn-apartment-img-view" src="{{url-path-img}}/apartament/01/item2.png" alt="">
+						<img class="azbn-apartment-img-view" src="" alt=""><!--{{url-path-img}}/apartament/01/item2.png-->
 					</div>
 				</div>
 			</div>
 			<div class="cols {{prefix}}col-right">
 				<div class="heading-block {{prefix}}heading-block">
 					<h1 class="heading-site {{prefix}}heading-site">
-						Квартира <br> 3-комнатная
+						Квартира <br> <span class="azbn__layouts__rooms_number" >0</span>-комнатная
 					</h1>
 					<span class="index-block-heading-line {{prefix}}heading-line"></span>
 				</div>
-				<div class="{{prefix}}apart-status">
+				
+				<div class="{{prefix}}apart-status azbn__points__free">
 					<span class="free">свободна</span>
 				</div>
-				<!-- <div class="{{prefix}}apart-status">
+				<div class="{{prefix}}apart-status azbn__points__is_reserved">
 					<span class="lock">бронь</span>
 				</div>
-				<div class="{{prefix}}apart-status">
+				<div class="{{prefix}}apart-status azbn__points__is_sold">
 					<span class="bay">продана</span>
-				</div> -->
+				</div>
+				
 				<div class="{{prefix}}apart-area">Площадь</div>
 				<div class="row {{prefix}}apart-row">
 					<div class="cols {{prefix}}apart-cols">
 						<div>Общая</div>
-						<div class="_num">104,12 м<sup>2</sup></div>
+						<div class="_num "><span class="azbn__layouts__total_area" >000,00</span> м<sup>2</sup></div>
 					</div>
 					<div class="cols {{prefix}}apart-cols">
 						<div>Жилая</div>
-						<div class="_num">57,8 м<sup>2</sup></div>
+						<div class="_num"><span class="azbn__layouts__living_area" >000,00</span> м<sup>2</sup></div>
 					</div>
 					<div class="cols {{prefix}}apart-cols">
 						<div>Кухня</div>
-						<div class="_num">14,32 м<sup>2</sup></div>
+						<div class="_num"><span class="azbn__layouts__layoutstoreys__kitchen_area" >000,00</span> м<sup>2</sup></div>
 					</div>
 				</div>
 				<div class="{{prefix}}apart-item _big row">
 					<div class="cols _left">Стоимость</div>
-					<div class="cols _right"><span>4 560 456</span> [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" class="{{prefix}}icon-ruble" ]]</div>				 
+					<div class="cols _right"><span class="azbn__points__price" >0 000 000</span> [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" class="{{prefix}}icon-ruble" ]]</div>				 
 				</div>
 				<div class="{{prefix}}apart-item _small row">
 					<div class="cols _left">Цена за кв.м</div>
-					<div class="cols _right"><span>43 800</span> [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" class="{{prefix}}icon-ruble" ]]</div>
+					<div class="cols _right"><span class="azbn__points__price__of_m2" >00 000</span> [[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" class="{{prefix}}icon-ruble" ]]</div>
 				</div>
 				<div class="{{prefix}}btn-block">
 					<div class="row">

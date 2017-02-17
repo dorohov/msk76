@@ -1,14 +1,47 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1060 650" class="floor-svg">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1061 651" class="floor-svg" >
 	<g id="svg-bg">
 		<image x="0" y="0" width="1060" height="650" xlink:href="/img/layouts/bg-apartment-2.png"/>
 	</g>
-	<g id="_897949664">
-		<polygon class="floor-polygon" data-apartment-id="1" points="2,311 2,200 8,200 8,161 17,161 17,162 146,162 146,152 388,152 388,162 472,162 472,161 479,161 479,374 375,374 375,371 348,371 348,374 286,374 286,379 279,379 279,374 229,374 153,374 153,322 2,322 "/>
-		<polygon class="floor-polygon" data-apartment-id="1" points="2,315 160,315 160,368 229,368 229,381 226,381 226,407 229,407 229,416 286,416 286,638 279,638 279,637 211,637 193,619 193,621 183,621 183,606 79,606 79,599 41,599 41,430 2,430 "/>
-		<polygon class="floor-polygon" data-apartment-id="1" points="365,416 365,419 392,419 392,416 479,416 479,638 472,638 472,637 286,637 286,638 279,638 279,416 "/>
-		<polygon class="floor-polygon" data-apartment-id="1" points="472,416 560,416 560,419 586,419 586,416 670,416 670,638 664,638 664,637 479,637 479,638 472,638 "/>
-		<polygon class="floor-polygon" data-apartment-id="1" points="983,416 983,565 978,565 978,607 970,607 970,605 871,605 871,606 767,606 767,621 758,621 758,620 741,637 670,637 670,638 664,638 664,416 750,416 750,420 777,420 777,416 865,416 "/>
-		<polygon class="floor-polygon" data-apartment-id="1" points="857,154 857,139 1054,139 1054,430 1035,430 1035,561 970,561 970,423 857,423 857,349 862,349 862,323 857,323 "/>
-		<polygon class="floor-polygon" data-apartment-id="1" points="883,4 1039,4 1039,2 1047,2 1047,42 1054,42 1054,147 865,147 865,315 836,315 836,312 811,312 811,315 707,315 707,241 644,241 634,241 634,213 638,213 685,166 685,162 700,162 700,42 857,42 857,2 865,2 865,4 "/>
+	<g class="floor-apartment" id="apartment-1" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="443"
+			points="2,311 2,200 8,200 8,161 17,161 17,162 146,162 146,152 388,152 388,162 472,162 472,161 479,161 479,374 375,374 375,371 348,371 348,374 286,374 286,379 279,379 279,374 229,374 153,374 153,322 2,322 " />
+	</g>
+	<g class="floor-apartment" id="apartment-2" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="429"
+			points="2,315 160,315 160,368 229,368 229,381 226,381 226,407 229,407 229,416 286,416 286,638 279,638 279,637 211,637 193,619 193,621 183,621 183,606 79,606 79,599 41,599 41,430 2,430 "/>
+	</g>
+	<g class="floor-apartment" id="apartment-3" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="769"
+			points="365,416 365,419 392,419 392,416 479,416 479,638 472,638 472,637 286,637 286,638 279,638 279,416 "/>
+	</g>
+	<g class="floor-apartment" id="apartment-4" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="406"
+			points="472,416 560,416 560,419 586,419 586,416 670,416 670,638 664,638 664,637 479,637 479,638 472,638 "/>
+	</g>
+	<g class="floor-apartment" id="apartment-5" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="394"
+			points="983,416 983,565 978,565 978,607 970,607 970,605 871,605 871,606 767,606 767,621 758,621 758,620 741,637 670,637 670,638 664,638 664,416 750,416 750,420 777,420 777,416 865,416 "/>
+	</g>
+	<g class="floor-apartment" id="apartment-6" >
+		<polygon 
+		class="floor-polygon" 
+			data-flat_id="381"
+			points="857,154 857,139 1054,139 1054,430 1035,430 1035,561 970,561 970,423 857,423 857,349 862,349 862,323 857,323 "/>
+	</g>
+	<g class="floor-apartment" id="apartment-7" >
+		<polygon 
+			class="floor-polygon" 
+			data-flat_id="369"
+			points="883,4 1039,4 1039,2 1047,2 1047,42 1054,42 1054,147 865,147 865,315 836,315 836,312 811,312 811,315 707,315 707,241 644,241 634,241 634,213 638,213 685,166 685,162 700,162 700,42 857,42 857,2 865,2 865,4 "/>
 	</g>
 </svg>
