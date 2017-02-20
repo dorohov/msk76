@@ -1,4 +1,8 @@
-<form action="#" class="form-site {{class}} azbn-form-save"> 
+<form action="#" class="form-site {{class}} azbn-form-save" data-target-url="/formsave.php" > 
+	<input type="hidden" name="action" value="azbnajax_call" />
+	<input type="hidden" name="method" value="formsave" />
+	<input type="hidden" name="type" value="json" />
+	
 	<div class="form-site__note ">{{note}}</div>
 	<div class="row {{prefix-page}}row">
 		<div class="cols {{prefix-page}}cols">

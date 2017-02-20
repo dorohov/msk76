@@ -4,11 +4,11 @@ DG.then(function () {
 		center: [52.97545, 36.0985],
 		zoom: 18,
 		scrollWheelZoom: false,
-        fullscreenControl: false
-  	});
+		fullscreenControl: false
+	});
 	var myIcon = DG.icon({
-		iconUrl: '/img/icon/icon-map.png',
-		iconRetinaUrl: '/img/icon/icon-map.png',
+		iconUrl: '/wp-content/themes/azbnbasetheme/img/icon/icon-map.png',//'/img/icon/icon-map.png',
+		iconRetinaUrl: '/wp-content/themes/azbnbasetheme/img/icon/icon-map.png',//'/img/icon/icon-map.png',
 		iconSize: [105, 125],
 		iconAnchor: [14, 125],
 		popupAnchor: [0, 0]

@@ -1,4 +1,8 @@
-<form action="/reviews-apartment-message.html" class="form-site {{class}} callbackwidget-call-form azbn-form-save"> 
+<form action="/reviews-apartment-message.html" class="form-site {{class}} callbackwidget-call-form azbn-form-save" data-target-url="/formsave.php" > 
+	<input type="hidden" name="action" value="azbnajax_call" />
+	<input type="hidden" name="method" value="formsave" />
+	<input type="hidden" name="type" value="json" />
+	
 	<div class="row {{prefix-page}}row">
 		<div class="cols {{prefix-page}}col-6">
 			<div class="{{prefix-form}}input">

@@ -88,7 +88,11 @@
 			<h1 class="heading-site _rvpc__heading-site">Заявка отправлена!</h1>
 			<span class="index-block-heading-line _rvpc__heading-line"></span>
 		</div>
-		<form action="/reviews-apartment-message.html" class="form-site form-reviews callbackwidget-call-form azbn-form-save"> 
+		<form action="/reviews-apartment-message.html" class="form-site form-reviews callbackwidget-call-form azbn-form-save" data-target-url="/formsave.php" > 
+	<input type="hidden" name="action" value="azbnajax_call" />
+	<input type="hidden" name="method" value="formsave" />
+	<input type="hidden" name="type" value="json" />
+	
 	<div class="row form-reviews__row">
 		<div class="cols form-reviews__col-6">
 			<div class="form-inline__input">
