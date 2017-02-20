@@ -1,0 +1,309 @@
+ //
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+	overflow: hidden; 
+}
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	&.fade .modal-dialog {
+		.translate(0, 0%);
+		.transition-transform(~"0.5s");
+	}
+	&.in .modal-dialog { .translate(0, 10%) }
+	@media @media-size-xs{
+		&.fade .modal-dialog {.translate(-100%, 0);}
+		&.in .modal-dialog { .translate(0, 0%) }
+		&.fade ._msf__dialog {.translate(-100%, 0%)}
+		&.in ._msf__dialog {.translate(0, 0%)}
+	}
+	@media @media-size-lg {
+		&.in .modal-dialog { .translate(0, 4%) }
+	}
+	@media @media-size-xxl{
+		&.in .modal-dialog { .translate(0, 30%) }
+	}
+	@media @media-size-sm{		
+		&.fade ._msc__dialog {.translate(100%, 0%)}
+		&.in ._msc__dialog {.translate(0, 0%)}
+		&.fade ._msf__dialog {.translate(-100%, 0%)}
+		&.in ._msf__dialog {.translate(0, 0%)}
+	}
+	@media @media-screen{		
+		&.fade ._msc__dialog {.translate(0, 100%)}
+		&.in ._msc__dialog {.translate(0, 0%)}
+		&.fade ._msf__dialog {.translate(-100%, 0%)}
+		&.in ._msf__dialog {.translate(0, 0%)}
+	}
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+	@media @media-notsmart{overflow-y: hidden;}
+	
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal-background;
+	background-color: @modal-backdrop-bg;
+	// Fade for backdrop
+	&.fade { .opacity(0); }
+	&.in { .opacity(0.90); }
+
+}
+.modal-dialog {
+	position: relative;
+	@media @media-size-xs 	{width: auto;	margin: 0px;}  
+	@media @media-size-sm 	{width: 620px;	margin: 10px auto;}  
+	@media @media-screen 	{width: 620px;	margin: 0px auto;}  
+	//background: url(../img/maket/form.jpg) no-repeat 0 -265px;
+}
+.modal-content {
+	position: relative;
+	outline: 0;
+}
+.modal-body {
+	position: relative;
+	padding: 40px 30px 30px;
+	background: @white;
+	color: @black;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	//opacity: 0.7;
+	font-size: @b-fs - 3px; //15px;
+	line-height: @b-lh - 6px; //22px;
+	@media @media-size-xs{padding: 25px;}	
+	@media @media-size-sml{padding: 30px;}
+}
+
+// Title text within header
+.modal-heading{}
+.modal-title {
+	font-family: @open-sbold;
+	margin-bottom: 0;
+	@media @media-device	{font-size: @b-fs + 8px; line-height: @b-lh + 10px;} 	// 24/30
+	@media @media-screen	{font-size: @b-fs + 20px; line-height: @b-lh + 22px;} 	// 36/42
+}
+.modal-btn-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    //transform: translateY(-50%);
+	@media @media-size-xs-p{
+		top: 20px;
+		right: 50%; 
+		transform: translateX(50%);
+	}
+	@media @media-size-xs-l{
+		top: 20px;
+		right: 20px;
+	}
+}
+.modal-block{
+    @media @media-size-xs-p {padding-top: 50px;}
+}
+.modal-note{
+	text-align: center;
+	margin-bottom: 30px;
+}
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+//custom styles
+._msc__dialog{
+	@media @media-notsmart {
+	    margin: 0 0 0 auto;
+	    position: absolute;
+		bottom: 0%;
+		right: 0;
+	} 
+   	@media @media-size-md{width:500px;}
+   	@media @media-size-lg{width:550px;}
+   	@media @media-size-xl{width:650px;}
+   	@media @media-size-xxl{width: 800px;}
+}
+._msc__body{
+	background: @yellow-light;
+	font-family: @open;
+	font-size: @b-fs + 12px; //28px; 
+	line-height: @b-lh + 16px; //36px; 
+	color: @black;
+	text-align: center;
+	justify-content: center;
+	//align-items: flex-start;	
+	position: relative;   	
+	@media @media-device{
+		font-size: @b-fs + 4px; //18px; 
+		line-height: @b-lh + 6px; //26px;
+		height: 100%;
+	} 
+	@media @media-notsmart {margin-top: 195px; height: 605px;}
+   	@media @media-size-md{margin-top: 140px; height: 400px;}
+   	@media @media-size-lg{margin-top: 140px; height: 455px;}
+   	@media @media-size-xl{height: 505px;}
+	&:before{		
+		background-image: url("@{url-path-img}/default/bg-form-top.png");
+		background-position: center bottom;
+		background-size: cover;
+		width: 100%;
+		position: absolute;
+		top: -194px;
+		height: 195px;
+		left: 0;
+		@media @media-notsmart {content: '';}
+   		@media @media-size-mdl{top: -139px;height: 140px;}
+
+	}
+}
+._msc__block{
+    max-width: 430px;
+    flex-basis: 100%;
+}
+._msc__form{
+	padding-top: 60px;
+   	@media @media-size-xs{padding-top: 25px;}
+   	@media @media-size-mdl{padding-top: 30px;}
+}
+._msc__form-btn{
+	padding-top: 45px;
+   	@media @media-size-xs{padding-top: 15px;}
+   	@media @media-size-mdl{padding-top: 25px;}
+}
+
+._msr__block{
+	width: 100%;
+	@media @media-size-xs{padding-top: 30px}
+}
+._msr__form-btn{
+	@media @media-size-xs{text-align: center;}
+}
+
+._msm__title{margin-bottom: 30px;}
+._msf__dialog{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+._msf__content{
+	height: 100%;
+}
+._msf__body{
+	background: @yellow-light;
+	@media @media-size-xs{
+		overflow-y: auto;
+	}
+}
+._msf__block{
+	width: 100%;
+	height: 100%;
+	img{
+		margin: 0 auto;
+		max-height: 100%;
+	}
+}
+.modal-owl{
+	@media @media-size-xs-l{padding: 0 40px;}
+	@media @media-notsmart{padding: 0 70px;}
+	@media @media-size-sm-l{
+		height: 100%;
+		.owl-stage-outer{
+			height: 100%;
+			.owl-stage{
+				height: 100%;
+				.owl-item{
+					height: 100%;
+					> div{height: 100%;}
+				}
+			}
+		}
+	}
+	@media @media-screen{
+		height: 100%;
+		.owl-stage-outer{
+			height: 100%;
+			.owl-stage{
+				height: 100%;
+				.owl-item{
+					height: 100%;
+					> div{height: 100%;}
+				}
+			}
+		}
+	}
+	.owl-nav{
+		div{
+			position: absolute;
+			top: 50%;    
+			transition: @transition-site;
+			transform: translateY(-50%);
+			&:before{
+				font-family: @icon;
+				display: block;
+				color: fadeout(@blue, 30%);
+				text-align: center;
+				font-size: 40px;
+				width: 70px;
+				line-height: 70px;
+				transition: @transition-site;
+			}
+			&:hover{
+				&:before{
+					//opacity: 1;
+					//background: @blue-darken;
+					color: @blue;
+				}
+			}
+		}
+		.owl-prev{
+			left: 0px;
+			&:before{
+				content: @icon-prev;
+			}
+		}
+		.owl-next{
+			right: 0px;
+			&:before{
+				content: @icon-next;
+			}
+		}
+	}
+}
+.modal-owl__item{
+	@media @media-size-xs{margin-bottom: 35px;}
+	/*width: 100%;
+	min-width: 100%;
+	height: 100%;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;*/
+}
