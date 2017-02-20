@@ -6,6 +6,19 @@ $(function(){
 		return ('' + i).replace('.', ','); 
 	}
 	
+	var getFlatData = function(id){
+		
+		var res = {};
+		res.flat = window.houseData.points[id];
+		//console.log(flat);
+		
+		res.layout_id = res.flat.layout;
+		res.layout = window.houseData.layouts[res.layout_id];
+		res.flat_d = res.layout.layoutstoreys[0];
+		
+		return res;
+	};
+	
 	Number.prototype.triads = function(sep, dot, frac){
 		sep = sep || String.fromCharCode(160);
 		dot = dot || ',';
@@ -36,6 +49,56 @@ $(function(){
 		return num + dot + a;
 	}
 	
+	
+	
+	$(document.body).on({
+		mouseenter : function(event) {
+			//console.log('mouseenter');
+			
+			var poly = $(this);
+			var popover = $('.azbn-flat-info-popover');
+			var cont = $('.azbn-floor-svg-container');
+			
+			var pos = poly.offset();
+			var _pos = cont.offset();
+			
+			var flat = getFlatData(poly.attr('data-flat_id') || 0);
+			
+			$('.azbn-flat-info-popover__rooms_number').html(flat.layout.rooms_number);
+			$('.azbn-flat-info-popover__total_area').html(__getHumanNum(flat.layout.total_area));
+			$('.azbn-flat-info-popover__price').html(__getHumanNum(flat.flat.price.triads()));
+			
+			popover.find('._status').hide();
+			
+			if(flat.flat.is_sold) {
+				popover.find('.azbn-flat-info-popover__status-is_sold').show();
+			} else if(flat.is_reserved) {
+				popover.find('.azbn-flat-info-popover__status-is_reserved').show();
+			} else {
+				popover.find('.azbn-flat-info-popover__status-free').show();
+			}
+			
+			popover.css({
+				top : pos.top - _pos.top - 40 + 'px',
+				left : pos.left - _pos.left + 20 + 'px',
+			})
+			
+			popover.fadeIn('fast');
+			
+		},
+		mouseleave : function(event) {
+			//console.log('mouseleave');
+			
+			var poly = $(this);
+			var popover = $('.azbn-flat-info-popover');
+			
+			popover.fadeOut('fast');
+			
+		},
+	}, '.floor-apartment .floor-polygon');
+	
+	
+	
 	$(document.body).on('azbn.load.houseData', null, {}, function(event){
 		
 		var p = window.location.href.split('?');
@@ -58,6 +121,8 @@ $(function(){
 					
 					console.log('этаж выбран! ' + p_o['floor_id']);
 					
+					$('.azbn-flat-info-popover').hide();
+					
 					$('.azbn-floor-num-selected').html(p_o['floor_id']);
 					
 					$('.azbn-floor-col-item[data-floor_id="' + p_o['floor_id'] + '"]').addClass('active');
@@ -74,34 +139,6 @@ $(function(){
 							var oldsvg = $('svg.floor-svg');
 							$(data).insertAfter(oldsvg);
 							oldsvg.empty().remove();
-							
-							
-							$('.floor-apartment .floor-polygon')
-								/*.each(function(index){
-									
-									var poly = $(this);
-									
-									console.log(poly.attr('data-flat_id'));
-									
-									poly.parent().parent().parent()
-										.attr('data-content', '123')
-										.attr('data-toggle', 'popover')
-										//.attr('data-trigger', 'hover')
-										.attr('title', 'Dismissible popover')
-										.popover({trigger : 'hover'})
-									;
-									
-								})*/
-								.on('mouseover', function(){
-									
-									var poly = $(this);
-									console.log(poly.offset());
-									
-								})
-								
-							;
-							
-							
 						}
 					});
 					

@@ -2,23 +2,23 @@
 	<div class="{{prefix}}inner">
 		<div class="row {{prefix}}row">
 			<div class="cols {{prefix}}col-left">				
-				<div class="{{prefix}}svg">	
+				<div class="{{prefix}}svg azbn-floor-svg-container">	
 					<a href="/layouts.html" class="{{prefix}}back-link btn-back-link">
 						<span>[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="back" class="{{prefix}}icon" ]]</span>
 						Выбрать этаж
 					</a>
 					
-					<!--
-					<div class="{{prefix}}popover">
-						<div class="_heading">3-комнатная</div>
-						<div class="_item">Площадь: <span>104,12 м<sup>2</sup></span></div>
-						<div class="_item">Стоимость: <span>4 560 456</span> 
+					
+					<div class="{{prefix}}popover azbn-flat-info-popover">
+						<div class="_heading"><span class="azbn-flat-info-popover__rooms_number" >3</span>-комнатная</div>
+						<div class="_item">Площадь: <span><span class="azbn-flat-info-popover__total_area" >0</span> м<sup>2</sup></span></div>
+						<div class="_item">Стоимость: <span class="azbn-flat-info-popover__price" >4 560 456</span> 
 						[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" class="{{prefix}}popover-ruble" ]]</div>
-						<div class="_status"><span class="free">свободна</span></div>
-						<div class="_status"><span class="lock">бронь</span></div>
-						<div class="_status"><span class="bay">продана</span></div> 
+						<div class="_status azbn-flat-info-popover__status-free"><span class="free">свободна</span></div>
+						<div class="_status azbn-flat-info-popover__status-is_reserved"><span class="lock">бронь</span></div>
+						<div class="_status azbn-flat-info-popover__status-is_sold"><span class="bay">продана</span></div> 
 					</div>
-					-->
+					
 					
 					<!-- {{url-path-img}}/layouts/bg-apartment-1.png -->
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1061 651" class="floor-svg">
