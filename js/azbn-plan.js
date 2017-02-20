@@ -2,6 +2,11 @@ $(function(){
 	//$('.btn-back-link').popover({trigger : 'hover'});
 	window.houseData = {};
 	
+	var getDateStr = function() {
+		var d = new Date();
+		return '' + d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + '-' + d.getHours();
+	}
+	
 	var __getHumanNum = function(i) {
 		return ('' + i).replace('.', ','); 
 	}
@@ -132,7 +137,7 @@ $(function(){
 					//$('#svg-bg image').attr('xlink:href', '/img/layouts/bg-apartment-' + img_index + '.png')
 					
 					$.ajax({
-						url : '/img/svg/floors/' + img_index + '.svg?v=' + (new Date().getTime()),
+						url : '/img/svg/floors/' + img_index + '.svg?v=' + getDateStr(),
 						type : 'GET',
 						dataType : 'text',
 						success : function(data){
@@ -250,7 +255,7 @@ $(function(){
 		
 	});
 	
-	$.getJSON('/json/content/houseData.12.json?v=' + (new Date().getTime()), function(data){
+	$.getJSON('/json/content/houseData.12.json?v=' + getDateStr(), function(data){
 		window.houseData = data;
 		$(document.body).trigger('azbn.load.houseData');
 	});
