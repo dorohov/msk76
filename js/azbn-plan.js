@@ -250,7 +250,7 @@ $(function(){
 		
 	});
 	
-	$.getJSON('/json/content/houseData.json?v=' + (new Date().getTime()), function(data){
+	$.getJSON('/json/content/houseData.12.json?v=' + (new Date().getTime()), function(data){
 		window.houseData = data;
 		$(document.body).trigger('azbn.load.houseData');
 	});
