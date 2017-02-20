@@ -55,6 +55,23 @@ $(function(){
 	}
 	
 	
+	$(document.body).on({
+		submit : function(event) {
+			event.preventDefault();
+			
+			var form = $(this);
+			var sform = form.serialize();
+			
+			$.post('/formsave.php', sform, function(data){
+				
+				$('#modal-message').modal();
+				form.trigger('reset');
+				
+			})
+			
+		},
+	}, 'form.azbn-form-save');
+	
 	
 	$(document.body).on({
 		mouseenter : function(event) {
@@ -77,7 +94,7 @@ $(function(){
 			
 			if(flat.flat.is_sold) {
 				popover.find('.azbn-flat-info-popover__status-is_sold').show();
-			} else if(flat.is_reserved) {
+			} else if(flat.flat.is_reserved) {
 				popover.find('.azbn-flat-info-popover__status-is_reserved').show();
 			} else {
 				popover.find('.azbn-flat-info-popover__status-free').show();
