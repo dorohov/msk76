@@ -85,11 +85,16 @@
 		event.preventDefault();
 		
 		var block = $(this);
+		var link = block.attr('data-link') || '';
 		var floor = parseInt(block.attr('data-floor-id')) || 0;
 		
 		var _href = $('.azbn-layouts-content').attr('data-base-url') || '';
 		
-		window.location.href = _href + floor;
+		if(link != '') {
+			window.location.href = link;
+		} else {
+			window.location.href = _href + floor;
+		}
 		
 	});
 	
