@@ -26,4 +26,9 @@ if (device.mobile() || device.tablet()) {
 	$(".bg-element").remove();
 } else {
 	$('.content-block.second').css("min-height", h_content);
+	$('.floor-page-content').css("height", h_content);
+	$('.layouts-page-content').css("height", h_content);
+}
+if (device.tablet()) {	
+	$('.layouts-page-content').css("height", h_content);
 }
