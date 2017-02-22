@@ -19,6 +19,7 @@ if (device.mobile()) {
 	$('.layouts-page-content').css("min-height", h_content_xs);
 } else{
 	$('.twoGIS-map__block').css("height", h_map);
+	$('.twoGIS-map__block').css("height", h_map);
 }
 if (device.mobile() || device.tablet()) {
 	$("._iabai__cols.one").prependTo($("._iabai__row._two"));
