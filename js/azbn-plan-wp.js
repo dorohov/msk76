@@ -60,12 +60,13 @@ $(function(){
 			event.preventDefault();
 			
 			var form = $(this);
-			var url = form.attr('data-target-url') || '/formsave.php';
+			var url = form.attr('data-target-url') || '/wp-admin/admin-ajax.php';
 			var sform = form.serialize();
+			
+			$('#modal-message').modal();
 			
 			$.post(url, sform, function(data){
 				
-				$('#modal-message').modal();
 				form.trigger('reset');
 				
 			})
@@ -73,89 +74,121 @@ $(function(){
 		},
 	}, 'form.azbn-form-save');
 	
-	
 	$(document.body).on({
-		mouseenter : function(event) {
-			//console.log('mouseenter');
+		submit : function(event) {
+			event.preventDefault();
 			
-			var poly = $(this);
-			var popover = $('.azbn-flat-info-popover');
-			var cont = $('.azbn-floor-svg-container');
+			var form = $(this);
+			var url = form.attr('data-target-url') || '/wp-admin/admin-ajax.php';
+			var sform = form.serialize();
 			
-			var pos = poly.offset();
-			var _pos = cont.offset();
+			//$('#modal-message').modal();
 			
-			var flat = getFlatData(poly.attr('data-flat_id') || 0);
-			
-			$('.azbn-flat-info-popover__rooms_number').html(flat.layout.rooms_number);
-			$('.azbn-flat-info-popover__total_area').html(__getHumanNum(flat.layout.total_area));
-			$('.azbn-flat-info-popover__price').html(__getHumanNum(flat.flat.price.triads()));
-			
-			popover.find('._status').hide();
-			
-			if(flat.flat.is_sold) {
-				popover.find('.azbn-flat-info-popover__status-is_sold').show();
-			} else if(flat.flat.is_reserved) {
-				popover.find('.azbn-flat-info-popover__status-is_reserved').show();
-			} else {
-				popover.find('.azbn-flat-info-popover__status-free').show();
-			}
-			
-			popover.css({
-				top : pos.top - _pos.top - 40 + 'px',
-				left : pos.left - _pos.left + 20 + 'px',
+			$.post(url, sform, function(data){
+				
+				//form.trigger('reset');
+				data = JSON.parse(data);
+				//console.log(data);
+				
+				if(data.response.data.item.auth && !data.response.data.item.error) {
+					window.location.reload();
+				} else {
+					alert('Ошибка входа! Проверьте логин и пароль.');
+				}
+				
 			})
 			
-			popover.fadeIn('fast');
-			
 		},
-		mouseleave : function(event) {
-			//console.log('mouseleave');
-			
-			var poly = $(this);
-			var popover = $('.azbn-flat-info-popover');
-			
-			popover.fadeOut('fast');
-			
-		},
-	}, '.floor-apartment .floor-polygon');
+	}, 'form.azbn-form-login');
+	
+	
+	if(device.desktop()) {
+		$(document.body).on({
+			mouseenter : function(event) {
+				//console.log('mouseenter');
+				
+				var poly = $(this);
+				var popover = $('.azbn-flat-info-popover');
+				var cont = $('.azbn-floor-svg-container');
+				
+				var pos = poly.offset();
+				var _pos = cont.offset();
+				
+				var flat = getFlatData(poly.attr('data-flat_id') || 0);
+				
+				$('.azbn-flat-info-popover__rooms_number').html(flat.layout.rooms_number);
+				$('.azbn-flat-info-popover__total_area').html(__getHumanNum(flat.layout.total_area));
+				$('.azbn-flat-info-popover__price').html(__getHumanNum(flat.flat.price.triads()));
+				
+				popover.find('._status').hide();
+				
+				if(flat.flat.is_sold) {
+					popover.find('.azbn-flat-info-popover__status-is_sold').show();
+				} else if(flat.flat.is_reserved) {
+					popover.find('.azbn-flat-info-popover__status-is_reserved').show();
+				} else {
+					popover.find('.azbn-flat-info-popover__status-free').show();
+				}
+				
+				popover.css({
+					top : pos.top - _pos.top - 40 + 'px',
+					left : pos.left - _pos.left + 20 + 'px',
+				})
+				
+				popover.fadeIn('fast');
+				
+			},
+			mouseleave : function(event) {
+				//console.log('mouseleave');
+				
+				var poly = $(this);
+				var popover = $('.azbn-flat-info-popover');
+				
+				popover.fadeOut('fast');
+				
+			},
+		}, '.floor-apartment .floor-polygon');
+	}
 	
 	
 	
 	$(document.body).on('azbn.load.houseData', null, {}, function(event){
 		
-		var p = window.location.href.split('?');
+		//var p = window.location.href.split('?');
 		
-		if(p.length > 1) {
+		if(1) {
 			
-			var p_str = p[1];
-			//console.log(p_str);
-			
-			var p_o = {};
-			var p_get = p[1].split('&');
-			if(p_get.length) {
+			//var p_str = p[1];
+			////console.log(p_str);
+			//
+			//var p_o = {};
+			//var p_get = p[1].split('&');
+			//if(p_get.length) {
+			if(1) {
+			//	for(i = 0; i < p_get.length; i++) {
+			//		var _ = p_get[i].split('=');
+			//		p_o[_[0]] = parseInt(_[1]);
+			//	}
 				
-				for(i = 0; i < p_get.length; i++) {
-					var _ = p_get[i].split('=');
-					p_o[_[0]] = parseInt(_[1]);
-				}
+				$__floor_id = parseInt($('.azbn-floor-content').attr('data-floor_id'));
 				
-				if(p_o['floor_id']) {
+				if($__floor_id > 0) {
 					
-					console.log('этаж выбран! ' + p_o['floor_id']);
+					console.log('этаж выбран! ' + $__floor_id);
 					
 					$('.azbn-flat-info-popover').hide();
 					
-					$('.azbn-floor-num-selected').html(p_o['floor_id']);
+					$('.azbn-floor-num-selected').html($__floor_id);
 					
-					$('.azbn-floor-col-item[data-floor_id="' + p_o['floor_id'] + '"]').addClass('active');
+					//$('.azbn-floor-col-item[data-floor_id="' + p_o['floor_id'] + '"]').addClass('active');
 					
-					var img_index = p_o['floor_id'];
+					var img_index = $__floor_id;
 					
 					//$('#svg-bg image').attr('xlink:href', '/img/layouts/bg-apartment-' + img_index + '.png')
 					
+					/*
 					$.ajax({
-						url : '/img/svg/floors/' + img_index + '.svg?v=' + getDateStr(),
+						url : '/wp-content/themes/azbnbasetheme/img/svg/floors/' + img_index + '.svg?v=' + getDateStr(),
 						type : 'GET',
 						dataType : 'text',
 						success : function(data){
@@ -164,13 +197,14 @@ $(function(){
 							oldsvg.empty().remove();
 						}
 					});
+					*/
 					
 					
 					
 					//console.log(flats);
 					
 				}
-				
+				/*
 				if(p_o['flat_id']) {
 					
 					console.log('квартира выбрана! ' + p_o['flat_id']);
@@ -216,7 +250,7 @@ $(function(){
 					}
 					
 				}
-				
+				*/
 			}
 			
 		} else if($('.layouts-page-content').length) {
@@ -273,7 +307,7 @@ $(function(){
 		
 	});
 	
-	$.getJSON('/json/content/houseData.12.json?v=' + getDateStr(), function(data){
+	$.getJSON('/background/stroycrm/houseData.12.json?v=' + getDateStr(), function(data){
 		window.houseData = data;
 		$(document.body).trigger('azbn.load.houseData');
 	});
