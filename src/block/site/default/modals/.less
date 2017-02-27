@@ -30,26 +30,10 @@
 	@media @media-size-xs{
 		&.fade .modal-dialog {.translate(-100%, 0);}
 		&.in .modal-dialog { .translate(0, 0%) }
-		//&.fade ._msf__dialog {.translate(-100%, 0%)}
-		//&.in ._msf__dialog {.translate(0, 0%)}
 	}
-	@media @media-size-lg {
-		&.in .modal-dialog { .translate(0, 4%) }
-	}
-	@media @media-size-xxl{
-		&.in .modal-dialog { .translate(0, 30%) }
-	}
-	@media @media-size-sm{		
-		&.fade ._msc__dialog {.translate(100%, 0%)}
-		&.in ._msc__dialog {.translate(0, 0%)}
-		//&.fade ._msf__dialog {.translate(-100%, 0%)}
-		//&.in ._msf__dialog {.translate(0, 0%)}
-	}
-	@media @media-screen{		
-		&.fade ._msc__dialog {.translate(0, -100%)}
-		&.in ._msc__dialog {.translate(0, 0%)}
-		//&.fade ._msf__dialog {.translate(-100%, 0%)}
-		//&.in ._msf__dialog {.translate(0, 0%)}
+	@media @media-notsmart{		
+		&.fade ._msc__dialog {.translate(-50%,-300%);}
+		&.in ._msc__dialog { .translate(-50%,-50%) }
 	}
 }
 .modal-open .modal {
@@ -148,8 +132,8 @@
 	@media @media-notsmart {
 	    margin: 0 0 0 auto;
 	    position: absolute;
-		top: 0%;
-		right: 0;
+		top: 50%;
+		left: 50%;
 	} 
    	@media @media-screen{width: 750px;}
 }

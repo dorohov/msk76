@@ -61,6 +61,9 @@
 		line-height: 13.5vh;//130
    		padding-left: 13%; 
 	}
+	@media @media-size-md-h{
+		padding-left: 9%; 
+	}
 }
 .advantages-num__line{
 	@media @media-screen{
@@ -120,6 +123,7 @@
 ._iabe__num-line{
 	width: 35%;
     left: 0;
+	@media @media-size-md-h{width: 20%;}
 }
 ._iab__equipment-item{
 	@media @media-size-xs{margin-bottom: @m-block-xs - 40}
@@ -202,6 +206,9 @@
 		width: 44%;
 		padding-top: 11.35vh; //110px;
 	}
+	@media @media-size-md-h{
+		width: 54%;
+	}
 	@media @media-size-xl{
 		width: 50%;
 	}
@@ -257,6 +264,9 @@
 		@media @media-size-mdl{
 			width: 20%;
 			img{max-height: 350px} 
+		}
+		@media @media-size-md-h{
+			width: 23%;
 		}
 		@media @media-size-xl{
 			width: 22%;
@@ -416,7 +426,6 @@
 	@media @media-device{
 		margin-bottom: 35px;
 	} 
-	@media @media-size-mdl{width: 40%;}
 	@media @media-screen{
 		z-index: 101!important;
 		left: 0;
@@ -425,6 +434,8 @@
 	    //padding-top: 85px;
 		padding-top: 8.85vh;//85px  		
 	}
+	@media @media-size-mdl{width: 40%;}
+	@media @media-size-md-h{width: 45%;}
 	&.skrollable-between{
 		._iabp__num-line{
 			animation-name: lineInRight;

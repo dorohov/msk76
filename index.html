@@ -23,20 +23,7 @@
 	</head>
 	<body class="index-page" id="body-index">
 		
-		<div class="_czr__loader active page-loader active" >
-	<div class="_czr__preloader-inner" >
-		<div class="_czr__preloader-process-container process-container" >
-			<div class="_czr__preloader-process-level process-level" ></div>
-		</div>
-		<div class="_czr__preloader-center" >
-			<!-- <div class="_azbn__preloader-percent" >75</div> -->
-			<a class="close-loader" href="#not-lazyload" >
-				<div id="_czr__spinner"></div>
-				<!-- <img src="/img/default/preloader.gif" alt=""> -->
-			</a>
-		</div>
-	</div>
-</div> 
+		 
 		<nav class="navbar navbar-site" 
 			data-0="position: static;" 
 			data-200="top[linear]: -100%; position:fixed;" 
@@ -751,7 +738,7 @@
 		</div>
 	</div>
 </form> 
-		<!-- <a href="#callbackwidget" class="btn-site btn-mustard btn-submit">Оставить заявку</a> -->
+		<!-- <a href="#" class="btn-site btn-mustard btn-submit" data-toggle="modal" data-target="#modal-message">Оставить заявку</a> -->
 	</div>
 	<div class="cols _icbc__cols-right">
 		<h3 class="_icbc__heading index-heading-sm">Офис продаж</h3> 
@@ -957,10 +944,10 @@
 <script src="/js/skrollr.min.js" ></script>
 <script src="/js/skrollr.menu.js"></script>
 <script type="text/javascript">
-	if(!device.mobile() && !device.tablet()){
-		var s = skrollr.init({
-			edgeStrategy: 'set',
-			constants: {
+	$(window).on('resize', function(){
+		var params = {};
+		if(screenJS.isMDH()){  
+			params = {
 				header: 				800,
 				advantages: 			870,
 				header__flat: 			600,
@@ -968,7 +955,54 @@
 				icon__down: 			1700,
 		    	equipmen: 				1000,
 		    	equipmen__item: 		1250,
-		    	access: 				1850,
+		    	access: 				1750,//1850
+		    	access__item: 			1750,//1850
+		    	safety: 				2400,//2700,
+		    	safety__item: 			2400,//2700,
+		    	beautification: 		2900,//3200,
+		    	beautification__item: 	2900,//3200,
+		    	parking: 				3350,//3750,
+		    	parking__item: 			3350,//3750,
+		    	backlight: 				3830,//4330,
+		    	flat: 					4300,//4960,
+		    	complex: 				4400,//5100,
+		    	locaion: 				4900,//5800,
+		    	map: 					5150,//6050,
+		    	contacts: 				5050,//6050,
+		    	contacts__item: 		5200,//6150,
+		    	footer: 				5200,//6150,
+
+		    	round1: 				1000,
+		    	round2: 				1350,
+		    	round3: 				1850,//1950,
+		    	round4: 				2750,//2850,
+		    	round5: 				4260,//4900,
+		    	round6: 				4310,//4950,
+		    	round7: 				5300,//6000,
+
+		    	rect1: 					1000,
+		    	rect2: 					650,//850,
+		    	rect3: 					2000,
+		    	rect4: 					2050,//2350,
+		    	rect5: 					2625,
+		    	rect6: 					2800,//3000,
+		    	rect7: 					3200,//3400,
+		    	rect8: 					3280,//3550,
+		    	rect9: 					3350,//3880,
+		    	rect10: 				4900,//5800,
+		    	rect11: 				4730,//5590,
+		    	rect12: 				4430//5230
+		    }
+		} else {
+			params = {
+				header: 				800,
+				advantages: 			870,
+				header__flat: 			600,
+				composition: 			1050,
+				icon__down: 			1700,
+		    	equipmen: 				1000,
+		    	equipmen__item: 		1250,
+		    	access: 				1850,//
 		    	access__item: 			1850,
 		    	safety: 				2700,
 		    	safety__item: 			2700,
@@ -1006,9 +1040,16 @@
 		    	rect11: 				5590,
 		    	rect12: 				5230
 		    }
-		});
-		skrollr.menu.init(s, {});
-	}
+		}
+
+		if(!device.mobile() && !device.tablet()){
+			var s = skrollr.init({
+				edgeStrategy: 'set',
+				constants: params,
+			});
+			skrollr.menu.init(s, {});
+		}
+	});
 </script>	
 		<script src="/js/retina.min.js" ></script>
 		<script src="/js/plax.js"></script>

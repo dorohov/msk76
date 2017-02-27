@@ -1,5 +1,6 @@
+$('.page-id-6 .navbar-site').addClass("scroll");
 var topPos = $(document).scrollTop();		
-var snb = $('.navbar-site.scroll');
+var snb = $('.page-id-6 .navbar-site.scroll');
 if(snb.hasClass('scroll-navbar')) {
 	if(topPos < 500) {
 		snb.removeClass('scroll-navbar');

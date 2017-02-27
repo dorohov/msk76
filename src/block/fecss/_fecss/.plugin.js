@@ -25,6 +25,11 @@ function fecss_ScreenJS() {
 			'portrait' : [],
 			'landscape' : [],
 		},
+		'md-h' : {
+			'default' : [],
+			'portrait' : [],
+			'landscape' : [],
+		},
 		'lg' : {
 			'default' : [],
 			'portrait' : [],
@@ -53,6 +58,10 @@ function fecss_ScreenJS() {
 	ctrl.isMD = function() {
 		return (ctrl.screen.w > 1024 && ctrl.screen.w < 1200);
 	};
+
+	ctrl.isMDH = function() {
+		return (ctrl.screen.w > 1024 && ctrl.screen.w < 1281  && ctrl.screen.h > 909);
+	};
 	
 	ctrl.isLG = function() {
 		return (ctrl.screen.w > 1199  && ctrl.screen.w < 1400);
@@ -74,6 +83,9 @@ function fecss_ScreenJS() {
 		} else
 		if(ctrl.isMD()) {
 			result = 'md';
+		} else
+		if(ctrl.isMDH()) {
+			result = 'md-h';
 		} else
 		if(ctrl.isLG()) {
 			result = 'lg';
