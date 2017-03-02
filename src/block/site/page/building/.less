@@ -43,6 +43,23 @@
 	@media @media-size-xxl{
 		margin: 16.1vh 12.5vw 0; 
 	}
+	&._not__adm{
+		@media @media-screen{
+			margin-top: 7.1vh;
+		}		
+	}
+}
+._bpc__inner-btn{	
+	position: relative;
+	z-index: 2;
+	@media @media-device{margin-top: 50px;}
+	@media @media-screen{
+		margin: 0 8vw; 
+		padding-top: 3vh;
+	}
+	@media @media-size-xxl{
+		margin: 0 12.5vw; 
+	}
 }
 ._bpc__line{
 	width: 3px;
@@ -181,6 +198,16 @@
 	cursor: pointer;
 	overflow:hidden;
 	position: relative;
+	.btn-adm{
+		position: absolute;
+		z-index: 5;
+		top: 0;
+		right: 20px;
+		background: @mustard;
+		svg{
+			fill: @black;
+		}
+	}
 	@media @media-device{
 		.icon-zoom{display: none;}
 	}

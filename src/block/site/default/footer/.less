@@ -16,6 +16,10 @@
 	@media @media-size-xs{
 		.layouts-page &{display: none;}
 	}	
+	@media @media-size-sm-p{
+		font-size: @b-footer-fs - 2; //16
+		line-height: @b-footer-lh - 2; //24
+	}
 	//background-color: red;	
 	//opacity: @opacity;
 	a{
@@ -62,13 +66,15 @@
 ._fs__copyright-cols{
 	width: 17%;
 	@media @media-device{width: 100%; margin-bottom: 20px;}
-	@media @media-size-sm{text-align: center;} 
+	@media @media-size-sm{text-align: left;} 
+	@media @media-size-sm{width: 30%} 
 	@media @media-size-mdl{width: 12%;}
 	@media @media-size-xl{width: 12%;}
 }
 ._fs__contacts-cols{
 	width: 40%;
 	@media @media-device{width: 100%; margin-bottom: 20px;}
+	@media @media-size-sm{width: 40%} 
 	@media @media-size-mdl{width: 52%;}
 	@media @media-size-xl{width: 48%;}
 }
@@ -78,6 +84,21 @@
 	@media @media-size-xs{
 		.social__row{justify-content: flex-start;}
 	}
+	@media @media-size-sm-p{
+		.social__row{
+			flex-wrap: wrap;
+			margin-right: -5px;
+			margin-left: -5px;
+			.cols{
+				padding-left: 5px;
+				padding-right: 5px;
+				width: 25%;
+			}
+		}
+	} 
+	@media @media-size-sm{
+		width: 30%;
+	} 
 	@media @media-size-mdl{width: 24%;}
 	@media @media-size-xl{width: 20%;}
 }
@@ -92,8 +113,10 @@
 }
 ._fs__contacts-row{
 	justify-content: space-between;
+	@media @media-size-sm{flex-wrap: wrap;} 
 	> .cols{
 		@media @media-size-xs{width: 100%; margin-bottom: 5px}
+		@media @media-size-sm{width: 100%;} 
 	}
 }
 ._fs__dorohovdesign-row{
