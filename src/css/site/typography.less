@@ -20,6 +20,24 @@ b, strong{font-weight: 700}
 	font-weight: 800;
 	text-transform: uppercase;
     @media @media-device{
+		letter-spacing: 2.5px;
+		margin-bottom: 20px;
+    }
+    @media @media-size-xs{
+		letter-spacing: 1px;   	
+    }
+    @media @media-screen{
+    	margin-bottom: 4vh;
+    	letter-spacing: 7px;
+    }
+    .calcFontSize(22, 66, 320, 1680);
+    .calcLineHeight(34, 66, 320, 1680);
+}
+/*
+.heading-site{
+	font-weight: 800;
+	text-transform: uppercase;
+    @media @media-device{
 		font-size: @b-fs + 14px; //30px;
 		line-height: @b-lh + 18px; //42px;
 		letter-spacing: 2.5px;
@@ -38,7 +56,7 @@ b, strong{font-weight: 700}
     	margin-bottom: 4vh;
     	letter-spacing: 7px;
     }
-}
+}*/
 .index-block-heading{	
 	font-weight: 800;
 	text-transform: uppercase;

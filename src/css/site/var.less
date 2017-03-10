@@ -1,7 +1,7 @@
 //===== url =====//
 @url-site:'';
 @url-path:'/wp-content/themes/azbnbasetheme'; 
-@url-path:'';
+//@url-path:'';
 @url-path-css:'@{url-path}/css';
 @url-path-fonts:'@{url-path}/fonts';
 @url-path-img:'@{url-path}/img';
@@ -160,6 +160,12 @@
 @media-size-xs-6: ~"(min-width: 375px) and (max-width: 767px)";
 @media-size-xs-6-l: ~"(min-width: 490px) and (max-width: 767px) and (orientation:landscape)";
 /* end's smart */
+.calcFontSize(@f-min, @f-max, @v-min, @v-max){
+	font-size: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
+}
+.calcLineHeight(@f-min, @f-max, @v-min, @v-max){
+	line-height: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
+}
 #site {
 	.bi(@img:'') {
 		background-image:url('@{url-path-img}/@{img}');

@@ -40,6 +40,11 @@ function fecss_ScreenJS() {
 			'portrait' : [],
 			'landscape' : [],
 		},
+		'device' : {
+			'default' : [],
+			'portrait' : [],
+			'landscape' : [],
+		},
 		'xxl' : {
 			'default' : [],
 			'portrait' : [],
@@ -72,6 +77,9 @@ function fecss_ScreenJS() {
 	ctrl.isXXL = function() {
 		return (ctrl.screen.w > 1680);
 	};
+	ctrl.device = function() {
+		return (ctrl.screen.w < 1025);
+	};
 	
 	ctrl.screenIs = function() {
 		var result = 'noname';
@@ -95,6 +103,9 @@ function fecss_ScreenJS() {
 		}else
 		if(ctrl.isXXL()) {
 			result = 'xxl';
+		}else
+		if(ctrl.device()) {
+			result = 'device';
 		}
 		return result;
 	};

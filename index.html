@@ -390,7 +390,7 @@
 				data-_access__item="top[linear]:20%;"
 				data-_access__item-700="top[linear]:-130%; visibility[linear]: hidden;"	
 			>
-				<div class="row _iabai__row _one">
+				<!-- <div class="row _iabai__row _one">
 	<div class="cols _iabai__cols one">
 		<img src="/img/index/access-item1.jpg" alt="">
 	</div>
@@ -405,7 +405,35 @@
 	<div class="cols _iabai__cols right">
 		<img src="/img/index/access-item4.jpg" alt="">
 	</div>
-</div> 				
+</div> -->
+<div class="row _iabai__row">
+	<div class="cols _iabai__cols one">
+		<img src="/img/index/access-item1-sm.jpg" 
+			data-src-0="/img/index/access-item1-sm.jpg" 
+			data-src-1025="/img/index/access-item1.jpg" alt=""
+		>
+	</div>
+	<div class="cols _iabai__cols left">
+		<img src="/img/index/access-item2-sm.jpg" 
+			data-src-0="/img/index/access-item2-sm.jpg" 
+			data-src-1025="/img/index/access-item2.jpg" alt=""
+		>
+	</div>
+	<div class="cols _iabai__cols center">
+		<img src="/img/index/access-item3-sm.jpg" 
+			data-src-0="/img/index/access-item3-sm.jpg" 
+			data-src-1025="/img/index/access-item3.jpg" alt=""
+		>
+	</div>
+	<div class="cols _iabai__cols right">
+		<img src="/img/index/access-item4-sm.jpg" 
+			data-src-0="/img/index/access-item4-sm.jpg" 
+			data-src-1025="/img/index/access-item4.jpg" alt=""
+		>
+	</div>
+</div>
+
+ 				
 			</div>
 			<div class="_iab__safety advantages-block"	
 				data-_safety--500="top[linear]:100%; visibility[linear]: visible;"
@@ -997,7 +1025,7 @@
 			params = {
 				header: 				800,
 				advantages: 			870,
-				header__flat: 			600,
+				header__flat: 			610,
 				composition: 			1050,
 				icon__down: 			1700,
 		    	equipmen: 				1000,
@@ -1041,13 +1069,14 @@
 		    	rect12: 				5230
 		    }
 		}
-
-		if(!device.mobile() && !device.tablet()){
+		if(!screenJS.device()) {	
 			var s = skrollr.init({
 				edgeStrategy: 'set',
 				constants: params,
-			});
+			});		
 			skrollr.menu.init(s, {});
+		} else {
+			skrollr.init().destroy();
 		}
 	});
 </script>	
@@ -1091,6 +1120,15 @@
 		var spinner = new Spinner(opts).spin(target);				
 	}
 
+</script>
+		<script src="/js/response.min.js" ></script> 
+<script>
+	Response.create({
+	    prop: "width", 
+	    prefix: "data-src- r src", 
+	    breakpoints: [1281,1025,961,768,481,320,0], 
+	    lazy: true
+	});
 </script>
 		<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
 <script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=1df1b39b170d0cb5d3f7be9cf7be70da" charset="UTF-8" async></script>

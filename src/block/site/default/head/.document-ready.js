@@ -21,7 +21,6 @@ $('.btn-journal').on('click', function(){
   	$("._dipc__journal-list").toggleClass('is-visible');  
 });
 retinajs();
-
 /*
 $('.getModal').click(function(event){
 	event.preventDefault();
