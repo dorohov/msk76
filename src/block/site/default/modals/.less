@@ -173,6 +173,7 @@
 	&block{width: 100%;}
 	&title{
     	text-align: center;
+		@media @media-size-sm{margin-bottom: 40px}
 		@media @media-screen{
 			font-size: 3vh;
 			line-height: 4vh;
@@ -185,10 +186,22 @@
 			height: 65vh;
 			padding: 0px 10px;
 		}
+		@media @media-size-sm{			
+			margin: 0 50px 30px;
+			height: 61vh;
+		}
 		@media @media-screen{
 			max-height: 65vh;
 			position: relative;
 			height: 100vh;
+			margin: 0 50px;
+			.journal-item__col-date{
+				width: 30%;
+				margin-top: 3px;
+			}
+			.journal-item__col-note{
+				width: 70%;
+			}
 		}
 	}
 }

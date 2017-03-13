@@ -797,6 +797,7 @@ textarea._frs__form-control{
 	&block{width: 100%;}
 	&title{
     	text-align: center;
+		@media @media-size-sm{margin-bottom: 40px}
 		@media @media-screen{
 			font-size: 3vh;
 			line-height: 4vh;
@@ -809,10 +810,22 @@ textarea._frs__form-control{
 			height: 65vh;
 			padding: 0px 10px;
 		}
+		@media @media-size-sm{			
+			margin: 0 50px 30px;
+			height: 61vh;
+		}
 		@media @media-screen{
 			max-height: 65vh;
 			position: relative;
 			height: 100vh;
+			margin: 0 50px;
+			.journal-item__col-date{
+				width: 30%;
+				margin-top: 3px;
+			}
+			.journal-item__col-note{
+				width: 70%;
+			}
 		}
 	}
 }
@@ -3880,15 +3893,18 @@ textarea._frs__form-control{
 ._icbc__cols-left{
 	@media @media-device{width: 100%; margin-bottom: 35px;}
 	@media @media-size-xs-l{width: 60%;}
+	@media @media-size-sm-l{width: 55%;}
 	@media @media-screen{width: 67%;}
 	@media @media-size-md-h{width: 64%;}
-	
+	@media @media-size-md{width: 57%;}	
 }
 ._icbc__cols-right{	
 	@media @media-device{width: 100%;}
 	@media @media-size-xs-l{width: 40%;}
+	@media @media-size-sm-l{width: 45%;}
 	@media @media-screen{width: 33%;}
 	@media @media-size-md-h{width: 36%;}
+	@media @media-size-md{width: 43%;}
 }
 ._icbc__office-row{
 	flex-wrap: wrap;
@@ -3911,10 +3927,11 @@ textarea._frs__form-control{
 	&.icon{
 		position: relative;
 		padding-left: 50px;    
-		margin-bottom: 20px;
+		margin-bottom: 40px;
+		&:nth-child(2){margin-bottom: 35px;}
 	}
 	&._address{
-		padding-top: 5px;
+		//padding-top: 5px;
 		span{
 			display: block;
 			font-weight: 700;
