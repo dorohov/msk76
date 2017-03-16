@@ -110,7 +110,7 @@
 			}
 		}*/
 		
-		.page-loader ._azbn__preloader-percent {
+		/*.page-loader ._azbn__preloader-percent {
 			position: absolute;
 			color: rgba(200,200,200,0.3);
 			font-size: 120px;
@@ -125,8 +125,7 @@
 			@media @media-device{
 				display:none;
 			}
-		}
-
+		}*/
 ._czr__loader{
 	position: fixed;
 	top: 0;
@@ -201,6 +200,66 @@
 	background: @blue-light;
 	transition: all 0.3s ease;
 } 
+
+
+.preload-anim__{
+	&block{
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: none;
+		background: @white;
+		//&.active{
+			display: block;
+			z-index: 21474836455;
+		//}
+		&.ready{ 
+			animation-name: loader;
+			animation-delay: 0.3s;
+			animation-duration: .5s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-timing-function: linear;				
+		}		
+	}
+	&inner{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&close{
+		display: block;
+		max-width: 350px;
+		max-height: 350px;
+	}
+
+}
+
+@keyframes loader{
+	from {
+		opacity: 1;
+		visibility: visible;
+	}
+	75%{
+		opacity: 0;
+	}
+	to {
+		opacity: 0;
+		visibility: hidden;
+	}
+}/*
+@keyframes loader-level{
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}*/
 .azbn-editor-field-item {
 	margin:12px 3px;
 	
@@ -1199,7 +1258,7 @@ textarea._frs__form-control{
 		@media @media-device{width: 100%; margin-bottom: 10px;}
 		@media @media-screen{
 			//margin: 0 20px;
-			padding: 0 20px;
+			padding: 0 17px;
 		}
 		@media @media-size-md-h{padding: 0 15px;}
 		> a{
@@ -1230,7 +1289,7 @@ textarea._frs__form-control{
 			@media @media-screen{
 				font-size: @b-nav-fs - 2px; //14px
 				line-height: @b-nav-lh - 2px; //22px
-				padding: 0; 
+				padding: 0 3px; 
 				color: fadeout(@b-nav-color, 0%);	
 				&::before{
 					content: '';

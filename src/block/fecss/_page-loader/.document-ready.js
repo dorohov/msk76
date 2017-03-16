@@ -25,7 +25,7 @@ $(window).load(function(event){
 		if(block.data('counter-can-close-it') && block.data('window-can-close-it')) {
 			
 			setTimeout(function(){
-				block.removeClass('active');//.delay(2000).empty().remove();
+				block.removeClass('active').addClass('ready');//.delay(2000).empty().remove();
 			},85);
 			
 		}
@@ -45,7 +45,14 @@ $(window).load(function(event){
 		var pl = $('.page-loader.active');
 		var b = $('._czr__preloader-process-container ._czr__preloader-process-level', pl).eq(0);
 		
-		if(b.size()) {
+		setTimeout(function(){
+			$('.page-loader')
+			.data('counter-can-close-it', true)
+			.trigger('fecss.can-close-it');
+
+		},4600);
+
+		/*if(b.size()) {
 			
 			var pos = 0;
 			
@@ -84,5 +91,5 @@ $(window).load(function(event){
 				}
 				
 			}, 40);
-		}
+		}*/
 	});

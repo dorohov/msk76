@@ -1,6 +1,6 @@
-<!--<script src="{{url-path-js}}/spin.min.js"></script>
+<script src="<?=$this->path('js');?>/spin.min.js"></script>
 <script>
-	if(typeof Spinner != 'undefined') {				
+	if(typeof Spinner != 'undefined') {
 		var opts = {
 			lines: 11, 
 			length: 24, 
@@ -26,5 +26,4 @@
 		var target = document.getElementById('_czr__spinner')
 		var spinner = new Spinner(opts).spin(target);				
 	}
-
-</script>-->
+</script>
