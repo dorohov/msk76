@@ -33,6 +33,13 @@ $(window).load(function(event){
 	});
 	
 	$(window).load(function(event){
+		
+		if(window.location.href == '#contacts-scroll') {
+			$('.page-loader')
+				.data('counter-can-close-it', true)
+			;
+		}
+		
 		$('.page-loader')
 			.data('window-can-close-it', true)
 			.trigger('fecss.can-close-it');
@@ -45,13 +52,24 @@ $(window).load(function(event){
 		var pl = $('.page-loader.active');
 		var b = $('._czr__preloader-process-container ._czr__preloader-process-level', pl).eq(0);
 		
-		setTimeout(function(){
-			$('.page-loader')
-			.data('counter-can-close-it', true)
-			.trigger('fecss.can-close-it');
-
-		},4600);
-
+		if(window.location.hash == '#contacts-scroll') {
+			
+			pl
+				.data('counter-can-close-it', true)
+				.data('window-can-close-it', true)
+				.removeClass('active')
+			;
+			
+		} else {
+			
+			setTimeout(function(){
+				$('.page-loader')
+					.data('counter-can-close-it', true)
+					.trigger('fecss.can-close-it');
+			},4600);
+			
+		}
+		
 		/*if(b.size()) {
 			
 			var pos = 0;
