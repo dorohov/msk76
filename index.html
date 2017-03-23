@@ -25,15 +25,7 @@
 		
 		 
 			
-		<div class="page-loader active preload-anim__block " >
-	<div class="preload-anim__inner">
-		<div>
-			<a class="close-loader preload-anim__close" href="#not-lazyload" >
-				<div id="bodymovin"></div>			
-			</a>
-		</div>
-	</div>
-</div> 
+		 
 		<nav class="navbar navbar-site" 
 			data-0="position: static;" 
 			data-200="top[linear]: -100%; position:fixed;" 
@@ -192,7 +184,7 @@
 				data-_composition="top[linear]:-100%; visibility[linear]: hidden;">
 				<div class="_ihcb__item">
 	<div class="_ihcb__num">1</div>
-	<div>секция</div>
+	<div><a href="#video" class="azbn-show-video-btn" data-iframe-url="https://www.youtube.com/embed/Ji57zqSe3q8?autoplay=1" >секция</a></div>
 </div>
 <div class="_ihcb__item">
 	<div class="_ihcb__num">12</div>
@@ -926,7 +918,24 @@
 			data-_rect8="top[linear]:30%;" 
 			data-_rect8-300="top[linear]:-120%; visibility[linear]: hidden;">
 		</div>
-
+		
+		<div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog _msv__dialog">
+		<div class="modal-content _msv__content">
+			<div class="modal-body _msv__body" >
+				<button type="button" class="btn-site btn-close modal-btn-close" data-dismiss="modal" aria-hidden="true"><svg class="icon-svg icon-cancel _msv__icon-cancel" role="img">
+	<use xlink:href="/img/svg/sprite.svg#cancel"></use>
+</svg></button>
+				<div class="modal-block _msv__block">		
+					
+					<iframe src="https://www.youtube.com/embed/Ji57zqSe3q8" frameborder="0" allowfullscreen></iframe>
+					
+				</div> 
+			</div>
+		</div>
+	</div>
+</div>
+		
 		<script src="/js/bodymovin/bodymovin.min.js"></script>
 <script src="/js/bodymovin/animation.js"></script>
 
