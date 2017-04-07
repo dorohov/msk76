@@ -2521,7 +2521,7 @@ textarea._frs__form-control{
 }
 ._flpc__col-right{
 	@media @media-device{width: 100%;}
-	@media @media-screen{width: 25%;/*width: 19%;*/}
+	@media @media-screen{width: 25%;/*width: 19%;*/ height: 100%;}
 	@media @media-size-md{width: 25%;}
 }
 ._flpc__svg{
@@ -2632,7 +2632,9 @@ textarea._frs__form-control{
 	   	flex-direction: row-reverse
 	}
 	@media @media-screen{
-		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: space-between;
+		//flex-direction: column;
    		height: 100%;
 	}
     ._item{
@@ -2645,7 +2647,8 @@ textarea._frs__form-control{
 			padding-top: 35px; 
 		}
 		@media @media-screen{
-			padding-left: 35px; 
+			padding-left: 35px; 			
+			width: 100%;
 		}
     	&::before{
     		content: '';
