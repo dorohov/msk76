@@ -107,6 +107,29 @@ b, strong{font-weight: 700}
 		line-height: 4.6vh;
 	}
 }
+
+.text-block{
+	div, p, ol, ul{margin-bottom: 15px;}
+	ul, ol{
+		li{margin-bottom: 10px;}
+	}
+	a{
+		color: darken(@mustard, 20%);
+		transition: @transition-site;
+		&, &:focus, &:hover{
+			text-decoration: none;
+		}
+		&:hover{
+			color: darken(@mustard, 15%);
+		}
+		&[href^="tel:"]{
+			&, &:focus, &:hover{
+				color: @b-color;
+				text-decoration: none; 
+			}
+		}
+	}
+}
 /*
 .heading-site{
 	color: @black;

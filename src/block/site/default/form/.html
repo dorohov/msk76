@@ -25,6 +25,15 @@
 			</div>	
 		</div>
 		<div class="cols {{prefix-page}}col-12">
+			<div class="{{prefix-page}}input {{prefix-form}}agreement">
+                <input class="{{prefix-form}}agreement-checkbox validate[required]" id="f[processing]" name="f[processing]" checked type="checkbox">
+                <label for="f[processing]" class="{{prefix-form}}agreement-label"></label>
+				<label for="f[processing]" class="{{prefix-form}}agreement-text">
+					Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+				</label>           
+			</div>
+		</div>
+		<div class="cols {{prefix-page}}col-12">
 			<div class="{{prefix-page}}input {{prefix-page}}btn">
 				<button type="submit" class="btn-site btn-mustard btn-submit">{{btn_name}}</button>
 			</div>	

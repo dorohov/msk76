@@ -1,5 +1,8 @@
 {
 	"contacts":{
+		"domain_link":"http://msk76.ru/",
+		"domain":"msk76.ru",
+		"agreement_page":"agreement",
 		"name":"Зенит",
 		"name_street":"ул. Московская, д.76",
 		"email":"sales@zenit-orel.ru",
