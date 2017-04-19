@@ -4772,6 +4772,8 @@ textarea._frs__form-control{
 	}
 }
 ._ilb__map{	
+	@media @media-size-xs{margin-bottom: @m-block-xs}
+	@media @media-size-sm{margin-bottom: @m-block-sm;}
 	@media @media-size-mdl{
 		margin-top: 60px;
 		padding-left: 40px;
@@ -4782,13 +4784,29 @@ textarea._frs__form-control{
 	}
 }
 ._ilbm__map{
-	width: 100%;	
-	@media @media-size-xs{height: 350px; margin-bottom: @m-block-xs}
+	width: 100%;		
+	@media @media-device{margin-bottom: 25px;}
+	@media @media-size-xs{height: 350px;}
 	@media @media-size-xs-l{height: 250px;}
-	@media @media-size-sm{height: 450px; margin-bottom: @m-block-sm;}
+	@media @media-size-sm{height: 450px;}
 	@media @media-size-mdl{height: 490px;}
 	@media @media-size-xl{height: 600px;}
 	@media @media-size-xxl{height: 745px;}
+	@media @media-screen{margin-bottom: 40px;}
+}
+._ilbm__banner{
+	margin-bottom: 35px;
+	@media @media-size-xs{height: 170px;}
+	@media @media-size-sm{height: 300px;}
+	@media @media-device{
+		background-repeat: no-repeat;
+		background-position: 75% center;
+		background-size: cover;
+		img{display: none;}
+	}
+	@media @media-screen{
+		background: none!important;
+	}
 }
 .azbn-show-video-btn {
 	display:inline-flex;
