@@ -8,8 +8,8 @@
 	position: relative;
 	z-index: 4;
 	color: @b-footer-color;
-	font-size: @b-footer-fs; //16
-	line-height: @b-footer-lh; //24
+	font-size: @b-footer-fs - 2px; //16
+	line-height: @b-footer-lh - 2px; //24
 	font-family: @b-footer-ff;
 	background-color: @b-footer-bg;
 	@media @media-size-sm{text-align: center;}
@@ -26,8 +26,8 @@
 		&, &:hover, &:focus{color: @b-footer-color;} 
 	}
 	@media @media-size-mdl{
-		font-size: @b-footer-fs - 2px; //14
-		line-height: @b-footer-lh - 2px; //22
+		font-size: @b-footer-fs - 4px; //14
+		line-height: @b-footer-lh - 4px; //22
 	}
 	.container{
 		padding-top: 25px;
@@ -37,8 +37,8 @@
 			padding-bottom: 15px;
 		}
 		@media @media-size-mdl{
-			padding-top: 20px;
-			padding-bottom: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
 		}
 	}
 	@media @media-size-xs{
@@ -58,7 +58,7 @@
 ._fs__row{
 	align-items: center;
 	//justify-content: space-between;	
-	@media @media-device{flex-wrap: wrap;}
+	flex-wrap: wrap;
 	> .cols{		
 		@media @media-size-xs{width: 100%; margin-bottom: 20px;}
 	}
@@ -108,6 +108,17 @@
 	@media @media-size-mdl{width: 12%;}
 	@media @media-size-xl{width: 20%;}
 }
+._fs__ofert-cols{
+	width: 100%;
+}
+._fs__ofert-text{
+	font-size: 10px;
+	line-height: 14px;
+	color: #afafaf;
+	max-width: 1100px;
+	padding-top: 20px;
+	@media @media-size-mdl{padding-top: 10px;}
+}
 ._fs__phone-cols{
 	@media @media-size-sm{width: 33.3333%;}
 }
@@ -124,12 +135,16 @@
 	//color: #c3c3c3;
 	font-size: @b-footer-fs - 3px; //13
 	//text-transform: lowercase;
+	margin: 0 -5px;
 	@media @media-size-sm{justify-content: center;}
 	@media @media-screen{justify-content: flex-end;}
 	@media @media-size-mdl{flex-wrap: wrap; text-align: center;}
 	> .cols{
 		padding: 0 5px;
-		@media @media-size-mdl{width: 100%;}
+		@media @media-size-mdl{
+			width: 100%;
+			&:nth-child(1){display: none;}
+		}
 	}
 }
 ._fs__dorohovdesign__logo{
